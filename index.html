@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Sloane Sterling — Elite Feminine Power</title>
+<meta name="description" content="Sloane Sterling is defining the future of elite feminine power — where movement, luxury, and obsession collide. Fashion, fitness, and travel — curated and engineered for women who refuse normal." />
+<meta name="theme-color" content="#0b0f17" />
+
+
+<!-- Open Graph / Twitter -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Sloane Sterling — Elite Feminine Power" />
+<meta property="og:description" content="Movement, luxury, and obsession — collide." />
+<meta property="og:image" content="/assets/og-cover.jpg" />
+<meta property="og:url" content="https://sloanesterling.com/" />
+<meta name="twitter:card" content="summary_large_image" />
+
+
+<!-- Favicon (replace with your own) -->
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+<link rel="preload" as="image" href="/assets/hero-poster.jpg" />
+<link rel="preload" as="video" href="/assets/hero.mp4" />
+<style>
+:root{
+--bg:#0b0f17; /* deep midnight */
+--card:#0f1522; /* card surface */
+--muted:#9fb0c6; /* muted text */
+--text:#f7f9fc; /* main text */
+--accent1:#7df9ff; /* electric cyan */
+--accent2:#ff5ea8; /* magenta */
+--ring: 0 0 0 2px color-mix(in oklab, var(--accent1) 60%, transparent);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+margin:0; background:radial-gradient(1200px 600px at 75% -10%, #132033 0%, transparent 70%),
+radial-gradient(1000px 500px at 10% 10%, #1a263d 0%, transparent 70%),
+var(--bg);
+color:var(--text); font: 500 16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+-webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+a{color:inherit; text-decoration:none}
+.wrap{max-width:1200px; margin-inline:auto; padding: clamp(16px, 2.5vw, 32px)}
+
+
+/* Header */
+header{position:fixed; inset-inline:0; top:0; z-index:50; backdrop-filter:saturate(140%) blur(8px);
+background:linear-gradient(to bottom, rgba(11,15,23,.75), rgba(11,15,23,.25), transparent);
+border-bottom:1px solid rgba(125,249,255,.08);
+}
+.brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.12em; text-transform:uppercase}
+.brand .dot{width:10px; height:10px; border-radius:50%; background:linear-gradient(135deg, var(--accent1), var(--accent2)); box-shadow:0 0 16px color-mix(in oklab, var(--accent1) 70%, #000 30%)}
+.nav{display:flex; gap:22px; align-items:center}
+.nav a{opacity:.8}
+.nav a:hover{opacity:1}
+
+
+/* Hero */
+.hero{position:relative; min-height: 88svh; display:grid; place-items:center; overflow:hidden}
+.hero video, .hero .poster{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center}
+.hero .overlay{position:absolute; inset:0; background:linear-gradient(180deg, rgba(6,9,15,.45), rgba(7,10,18,.7) 60%, rgba(11,15,23,.92));}
+.hero .content{position:relative; z-index:1; text-align:center; padding: min(5vw, 56px)}
+h1{font-size:clamp(28px, 5.5vw, 64px); line-height:1.05; margin:0 0 18px; letter-spacing:-.01em}
+.sub{color:var(--muted); font-size: clamp(14px, 1.6vw, 18px); max-width:850px; margin: 0 auto 28px}
+.ctas{display:flex; flex-wrap:wrap; gap:12px; justify-content:center}
+.btn{--bg:color-mix(in oklab, var(--accent1) 10%, #0d1421); background: var(--bg);
+border:1px solid rgba(125,249,255,.25); color:var(--text); padding:12px 18px; border-radius:14px; font-weight:650;
+box-shadow: 0 6px 20px rgba(0,0,0,.35), inset 0 0 24px rgba(125,249,255,.09);
+transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+display:inline-flex; align-items:center; gap:10px}
+.btn:hover{transform:translateY(-1px); box-shadow:0 10px 28px rgba(0,0,0,.5), inset 0 0 28px rgba(125,249,255,.14); border-color: rgba(125,249,255,.55)}
+.btn.primary{background:linear-gradient(135deg, color-mix(in oklab, var(--accent1) 28%, #0b0f17), color-mix(in oklab, var(--accent2) 18%, #0b0f17));}
+.btn.ghost{background:transparent; border-color:rgba(255,255,255,.24)}
+
+
+/* Sections */
+section{scroll-margin-top:84px}
+.section{padding: clamp(42px, 6vw, 90px) 0}
+.title{font-size: clamp(22px, 3.6vw, 40px); margin:0 0 18px}
+.eyebrow{color:var(--accent1); text-transform:uppercase; letter-spacing:.22em; font-size:12px; margin-bottom:10px; display:inline-block}
+.grid{display:grid; gap:16px; grid-template-columns:repeat(1,minmax(0,1fr))}
+@media (min-width:720px){.grid{grid-template-columns:repeat(2, minmax(0,1fr))}}
+</html>
