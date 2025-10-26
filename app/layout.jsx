@@ -5,10 +5,10 @@ export default function RootLayout({ children }) {
     <html lang="en" className="dark">
       <body className="font-sans bg-titanium text-white overflow-x-hidden">
 
-        {/* FLOATING GLASS NAV — ABSOLUTE, SITS OVER HERO FROM THE START */}
+        {/* ULTRA-SUBTLE GLASS NAV — VISIBLE FROM START, STRENGTHENS ON SCROLL */}
         <header
           id="luxenav"
-          className="fixed top-0 left-0 w-full z-50 opacity-0 transition-all duration-500 ease-[cubic-bezier(.4,0,.2,1)] backdrop-blur-xl bg-black/30 border-b border-white/10"
+          className="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-black/20 transition-all duration-700 ease-[cubic-bezier(.4,0,.2,1)]"
         >
           <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
             {/* LOGO */}
@@ -26,20 +26,18 @@ export default function RootLayout({ children }) {
           </div>
         </header>
 
-        {/* HERO STARTS AT PIXEL ZERO — NO PADDING, NO GAP */}
-        <main className="pt-0">
-          {children}
-        </main>
+        {/* HERO + CONTENT — ZERO GAP */}
+        {children}
 
-        {/* SCROLL LOGIC — MAKE NAV APPEAR ONCE USER MOVES */}
+        {/* SCROLL INTENSITY LOGIC */}
         <script dangerouslySetInnerHTML={{
           __html: `
+            const nav = document.getElementById('luxenav');
             window.addEventListener('scroll', () => {
-              const nav = document.getElementById('luxenav');
               if (window.scrollY > 30) {
-                nav.style.opacity = '1';
+                nav.style.background = 'rgba(0, 0, 0, 0.4)';
               } else {
-                nav.style.opacity = '0';
+                nav.style.background = 'rgba(0, 0, 0, 0.2)';
               }
             });
           `
