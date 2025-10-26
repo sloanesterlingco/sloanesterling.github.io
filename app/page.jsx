@@ -1,8 +1,7 @@
 export default function Home() {
   return (
-    <main className="min-h-screen bg-titanium text-white relative">
-
-      {/* FULL-SCREEN HERO VIDEO */}
+    <main className="min-h-screen bg-titanium text-white overflow-x-hidden">
+      {/* ---------------------- HERO SECTION ---------------------- */}
       <div className="relative w-full h-screen overflow-hidden">
         <video
           src="/hero.mp4"
@@ -12,44 +11,97 @@ export default function Home() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         />
+        <div className="absolute inset-0 bg-black/50" />
+        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
+          <h1 className="text-6xl md:text-8xl font-extrabold tracking-tight">
+            LuxeSculpt™
+          </h1>
+          <p className="text-xl md:text-3xl text-neutral-300 mt-4 max-w-3xl">
+            Bioadaptive Athletic Architecture for Maximum Force, Minimal Fatigue.
+          </p>
+          <p className="text-neutral-400 text-sm md:text-base mt-3">
+            by <span className="text-white font-semibold">Sloane Sterling™</span>
+          </p>
+        </div>
       </div>
 
-      {/* SECTION 2 — ASCENSION MANIFESTO */}
-      <section className="w-full min-h-[60vh] flex items-center justify-center text-center px-6 opacity-0 transition-opacity duration-700 delay-200" id="section2">
-        <div>
-          <p className="text-2xl md:text-3xl leading-relaxed max-w-3xl mx-auto font-light tracking-wide">
-            You were not built to endure.<br />
-            You were built to ascend.
-          </p>
-          <p className="text-sm md:text-base text-neutral-400 mt-6 max-w-2xl mx-auto">
-            LuxeSculpt maps muscular intelligence — translating motion into power.
+      {/* ---------------------- SECTION 2 — ASCENSION MANIFESTO ---------------------- */}
+      <section className="relative py-32 text-center bg-titanium">
+        <div className="max-w-3xl mx-auto px-6">
+          <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
+            Engineered Elegance.
+          </h2>
+          <p className="text-lg md:text-xl text-neutral-300 leading-relaxed">
+            Every seam, every fiber, designed to obey human motion and enhance endurance.
+            LuxeSculpt™ is not apparel. It’s biomechanical harmony—where strength meets grace.
           </p>
         </div>
       </section>
 
-      {/* SECTION 3 — 2×2 EDITORIAL CATEGORY PORTALS */}
-      <section className="w-full py-32 flex items-center justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-32 text-center text-lg font-light tracking-[0.15em] uppercase">
-          <a href="#leggings" className="hover:opacity-70 transition">Leggings</a>
-          <a href="#sport-bras" className="hover:opacity-70 transition">Sport Bras</a>
-          <a href="#tops" className="hover:opacity-70 transition">Tops</a>
-          <a href="#accessories" className="hover:opacity-70 transition">Accessories</a>
+      {/* ---------------------- SECTION 3 — CATEGORY GRID ---------------------- */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto px-6 pb-40 text-center">
+        <div className="border border-white/10 rounded-2xl p-10 hover:bg-white/5 transition">
+          <h3 className="text-3xl font-semibold mb-4">Leggings</h3>
+          <p className="text-neutral-400">3D-support sculpted compression with integrated pocket design.</p>
+        </div>
+        <div className="border border-white/10 rounded-2xl p-10 hover:bg-white/5 transition">
+          <h3 className="text-3xl font-semibold mb-4">Sport Bras</h3>
+          <p className="text-neutral-400">Support that breathes—bioadaptive fit engineered for motion.</p>
+        </div>
+        <div className="border border-white/10 rounded-2xl p-10 hover:bg-white/5 transition">
+          <h3 className="text-3xl font-semibold mb-4">Tops</h3>
+          <p className="text-neutral-400">Seamless thermal balance, elegant compression flow.</p>
+        </div>
+        <div className="border border-white/10 rounded-2xl p-10 hover:bg-white/5 transition">
+          <h3 className="text-3xl font-semibold mb-4">Accessories</h3>
+          <p className="text-neutral-400">Complete the motion system with adaptive-grip support gear.</p>
         </div>
       </section>
 
-      {/* SCROLL REVEAL LOGIC FOR SECTION 2 */}
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            const sec2 = document.getElementById('section2');
-            window.addEventListener('scroll', () => {
-              if (window.scrollY > window.innerHeight * 0.1) {
-                sec2.style.opacity = '1';
-              }
-            });
-          `
-        }}
-      />
+      {/* ---------------------- SECTION 4 — HYPERCLEAN REVEAL ---------------------- */}
+      <section
+        id="leggings"
+        className="relative flex flex-col items-center justify-center min-h-screen bg-titanium"
+      >
+        {/* atmospheric aura */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/5 via-transparent to-white/0" />
+
+        {/* placeholder silhouette */}
+        <img
+          src="/placeholder-leggings.png"
+          alt="LuxeSculpt™ Legging — HyperClean Reveal"
+          className="w-auto h-[90vh] object-contain opacity-0 animate-[fadeInUp_2.5s_ease-out_forwards]"
+        />
+
+        {/* caption text */}
+        <div className="absolute bottom-16 text-center px-6">
+          <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4">
+            The LuxeSculpt™ Legging
+          </h2>
+          <p className="text-neutral-300 text-lg md:text-xl max-w-2xl mx-auto">
+            Full-body compression mapped with biomech precision.  
+            Crafted for flow. Built for force.
+          </p>
+        </div>
+      </section>
+
+      {/* ---------------------- ANIMATION KEYFRAMES ---------------------- */}
+      <style jsx>{`
+        @keyframes fadeInUp {
+          0% {
+            opacity: 0;
+            transform: translateY(80px);
+          }
+          33% {
+            opacity: 0;
+            transform: translateY(80px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
     </main>
   );
 }
