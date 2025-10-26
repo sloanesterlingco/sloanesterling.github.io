@@ -6,6 +6,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+  'pulse-slow': 'pulse 2.5s infinite',
+},
       backgroundColor: {
         titanium: "#080808",
       },
