@@ -1,9 +1,11 @@
 "use client";
 
+import Image from "next/image";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-titanium text-white overflow-x-hidden">
-      {/* ---------------------- HERO SECTION ---------------------- */}
+      {/* ---------------- HERO ---------------- */}
       <div className="relative w-full h-screen overflow-hidden">
         <video
           src="/hero.mp4"
@@ -27,7 +29,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* ---------------------- SECTION 2 — ASCENSION MANIFESTO ---------------------- */}
+      {/* ---------------- SECTION 2 ---------------- */}
       <section className="relative py-32 text-center bg-titanium">
         <div className="max-w-3xl mx-auto px-6">
           <h2 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
@@ -40,25 +42,80 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------------------- SECTION 3 — CATEGORY GRID ---------------------- */}
+      {/* ---------------- SECTION 3 ---------------- */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto px-6 pb-40 text-center">
         <div className="border border-white/10 rounded-2xl p-10 hover:bg-white/5 transition">
           <h3 className="text-3xl font-semibold mb-4">Leggings</h3>
-          <p className="text-neutral-400">3D-support sculpted compression with integrated pocket design.</p>
+          <p className="text-neutral-400">
+            3D-support sculpted compression with integrated pocket design.
+          </p>
         </div>
         <div className="border border-white/10 rounded-2xl p-10 hover:bg-white/5 transition">
           <h3 className="text-3xl font-semibold mb-4">Sport Bras</h3>
-          <p className="text-neutral-400">Support that breathes—bioadaptive fit engineered for motion.</p>
+          <p className="text-neutral-400">
+            Support that breathes—bioadaptive fit engineered for motion.
+          </p>
         </div>
         <div className="border border-white/10 rounded-2xl p-10 hover:bg-white/5 transition">
           <h3 className="text-3xl font-semibold mb-4">Tops</h3>
-          <p className="text-neutral-400">Seamless thermal balance, elegant compression flow.</p>
+          <p className="text-neutral-400">
+            Seamless thermal balance, elegant compression flow.
+          </p>
         </div>
         <div className="border border-white/10 rounded-2xl p-10 hover:bg-white/5 transition">
           <h3 className="text-3xl font-semibold mb-4">Accessories</h3>
-          <p className="text-neutral-400">Complete the motion system with adaptive-grip support gear.</p>
+          <p className="text-neutral-400">
+            Complete the motion system with adaptive-grip support gear.
+          </p>
         </div>
       </section>
+
+      {/* ---------------- SECTION 4 — HYPERCLEAN REVEAL ---------------- */}
+      <section
+        id="leggings"
+        className="relative flex flex-col items-center justify-center min-h-screen bg-titanium"
+      >
+        {/* atmospheric aura */}
+        <div className="absolute inset-0 bg-gradient-to-b from-white/5 via-transparent to-transparent" />
+
+        {/* placeholder silhouette (auto-generated neutral asset) */}
+        <Image
+          src="https://dummyimage.com/600x1200/0a0a0a/ffffff&text=LuxeSculpt+Legging"
+          alt="LuxeSculpt™ Legging — HyperClean Reveal"
+          width={600}
+          height={1200}
+          className="opacity-0 animate-[fadeInUp_2.5s_ease-out_forwards]"
+        />
+
+        {/* caption */}
+        <div className="absolute bottom-16 text-center px-6">
+          <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4">
+            The LuxeSculpt™ Legging
+          </h2>
+          <p className="text-neutral-300 text-lg md:text-xl max-w-2xl mx-auto">
+            Full-body compression mapped with biomech precision.<br />
+            Crafted for flow. Built for force.
+          </p>
+        </div>
+      </section>
+
+      {/* ---------------- ANIMATION KEYFRAMES ---------------- */}
+      <style jsx>{`
+        @keyframes fadeInUp {
+          0% {
+            opacity: 0;
+            transform: translateY(80px);
+          }
+          33% {
+            opacity: 0;
+            transform: translateY(80px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
     </main>
   );
 }
