@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-titanium text-white relative !mt-0 !pt-0 !top-0">
       {/* FULL-SCREEN VIDEO HERO */}
-      <div className="relative w-full h-screen overflow-hidden">
+      <div className="relative w-full h-screen overflow-hidden !mt-0 !pt-0 !top-0">
         <video
           src="/hero.mp4"
           autoPlay
@@ -46,4 +46,5 @@ export default function Home() {
     </main>
   );
 }
+
 
