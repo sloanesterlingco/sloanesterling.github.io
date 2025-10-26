@@ -97,6 +97,27 @@ export default function Home() {
           </p>
         </div>
       </section>
+      {/* ---------------------- SECTION 5 — BIOMECHANICAL AWAKENING ---------------------- */}
+      <section className="relative flex flex-col items-center justify-center min-h-screen bg-titanium">
+        {/* biomech lab glow background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-platinum/20 via-transparent to-transparent opacity-60 pointer-events-none" />
+
+        {/* biomech muscle activation visual */}
+        <Image
+          src="/leggings.png"
+          alt="LuxeSculpt™ Biomech Activation"
+          width={1500}
+          height={3000}
+          className="opacity-0 animate-biomech-scan object-contain max-h-[90vh]"
+        />
+
+        {/* silent clinical status code */}
+        <div className="absolute bottom-12 text-center">
+          <p className="text-xs uppercase tracking-[0.3em] text-platinum/50">
+            Biomech Neural Compression Engine • Online
+          </p>
+        </div>
+      </section>
 
       {/* ---------------- ANIMATION KEYFRAMES ---------------- */}
       <style jsx>{`
@@ -118,5 +139,6 @@ export default function Home() {
     </main>
   );
 }
+
 
 
