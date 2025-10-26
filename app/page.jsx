@@ -167,6 +167,47 @@ export default function Home() {
   </div>
 </section>
 
+      {/* ---------------------- SECTION 8 — LUXESCULPT MOTION OS ---------------------- */}
+<section
+  id="shop-motion"
+  className="relative w-full bg-titanium py-32 overflow-x-auto flex gap-20 snap-x snap-mandatory scroll-smooth"
+  style={{ scrollBehavior: "smooth" }}
+>
+  {/* AUTONOMOUS DRIFT */}
+  <style>{`
+    #shop-motion {
+      animation: subtle-glide 18s linear infinite alternate;
+    }
+    @keyframes subtle-glide {
+      0% { scroll-left: 0; }
+      100% { scroll-left: 80px; }
+    }
+  `}</style>
+
+  {/* MODULE 1 — CENTER, ACTIVE */}
+  <div className="snap-center shrink-0 w-[70vw] max-w-xl mx-auto relative">
+    <img
+      src="/leggings.png"
+      alt="LuxeSculpt™ Motion Leggings"
+      className="w-full object-contain opacity-90 hover:opacity-100 transition duration-700 ease-atmospheric"
+    />
+    <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent via-white/5 to-transparent opacity-0 hover:opacity-100 transition duration-1000"></div>
+    <p className="text-xs tracking-[0.3em] text-platinum/50 mt-6 uppercase text-center">
+      System Module: Lower-Limb Force Output A1
+    </p>
+  </div>
+
+  {/* GHOST 2 — Right Preview */}
+  <div className="snap-center shrink-0 w-[70vw] max-w-xl opacity-30 blur-[1px] hover:opacity-100 hover:blur-0 transition duration-500">
+    <img src="/leggings.png" alt="Upcoming Module" className="w-full object-contain" />
+  </div>
+
+  {/* GHOST 3 — Left Preview */}
+  <div className="snap-center shrink-0 w-[70vw] max-w-xl opacity-30 blur-[1px] hover:opacity-100 hover:blur-0 transition duration-500">
+    <img src="/leggings.png" alt="Upcoming Module" className="w-full object-contain" />
+  </div>
+</section>
+
       {/* ---------------- ANIMATION KEYFRAMES ---------------- */}
       <style jsx>{`
         @keyframes fadeInUp {
@@ -187,6 +228,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
