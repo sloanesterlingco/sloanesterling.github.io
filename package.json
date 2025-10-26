@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build --debug",
+    "build": "next build",
     "start": "next start"
   },
   "dependencies": {
@@ -18,7 +18,8 @@
     "autoprefixer": "^10.4.17",
     "postcss": "^8.4.35",
     "typescript": "^5.3.3",
-    "@tailwindcss/typography": "^0.5.10"
+    "@tailwindcss/typography": "0.5.10"
   }
 }
+
 
