@@ -1,21 +1,12 @@
-import type { Config } from "tailwindcss";
-
-const config: Config = {
-  darkMode: "class",
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}"
-  ],
   theme: {
     extend: {
       backgroundColor: {
-        titanium: "#080808", // black titanium base
+        titanium: "#080808",
       },
       colors: {
         titanium: "#080808",
       },
       fontFamily: {
-        // TEMP — LuxeSculpt private futurist replacement comes next
         sans: ["ui-sans-serif", "system-ui"],
       },
       transitionTimingFunction: {
@@ -23,9 +14,5 @@ const config: Config = {
       },
     },
   },
-  plugins: [
-    require("@tailwindcss/typography"),
-  ],
+  plugins: []    // ← leave empty for now
 };
-
-export default config;
