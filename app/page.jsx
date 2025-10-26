@@ -118,6 +118,33 @@ export default function Home() {
           </p>
         </div>
       </section>
+{/* ---------------------- SECTION 6 — MOTION PERFORMANCE ---------------------- */}
+<section className="relative flex flex-col items-center justify-center min-h-screen bg-titanium overflow-hidden">
+  {/* backdrop gradient for subtle kinetic depth */}
+  <div className="absolute inset-0 bg-gradient-to-b from-black via-titanium to-black opacity-80" />
+
+  {/* motion blur stripe visual */}
+  <div className="absolute inset-0 flex justify-center">
+    <div className="w-[40%] h-full bg-gradient-to-b from-platinum/10 via-platinum/30 to-transparent blur-3xl animate-pulse-slow" />
+  </div>
+
+  {/* product silhouette or video placeholder */}
+  <img
+    src="/leggings.png"
+    alt="LuxeSculpt™ Motion Series"
+    width={1500}
+    height={3000}
+    className="relative z-10 object-contain max-h-[85vh] opacity-90 hover:opacity-100 transition duration-700 ease-atmospheric"
+  />
+
+  {/* text overlay */}
+  <div className="relative z-20 mt-10 text-center">
+    <h2 className="text-4xl md:text-6xl font-bold tracking-tight">Motion Perfected</h2>
+    <p className="mt-4 text-neutral-300 max-w-xl">
+      Engineered for continuous flow. Every fiber aligned for balance, strength, and forward drive.
+    </p>
+  </div>
+</section>
 
       {/* ---------------- ANIMATION KEYFRAMES ---------------- */}
       <style jsx>{`
@@ -139,6 +166,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
