@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* LuxeSculpt™ Root Atmosphere */
 html, body {
   @apply bg-titanium text-white antialiased;
   min-height: 100%;
