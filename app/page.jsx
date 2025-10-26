@@ -2,7 +2,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-titanium text-white relative">
 
-      {/* FULL-SCREEN VIDEO HERO */}
+      {/* FULL-SCREEN HERO VIDEO */}
       <div className="relative w-full h-screen overflow-hidden">
         <video
           src="/hero.mp4"
@@ -12,21 +12,6 @@ export default function Home() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         />
-
-        {/* CINEMATIC SCROLL CUE — ENTER LUXESCULPT™ */}
-        <div
-          id="scrollCue"
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-700 delay-1000 pointer-events-none"
-        >
-          <div className="flex flex-col items-center gap-3">
-            <span className="tracking-[0.2em] text-xs font-light">
-              ENTER LUXESCULPT™
-            </span>
-            <div className="relative w-8 h-8 rounded-full border border-white/40 flex items-center justify-center animate-pulse-slow">
-              <span className="text-sm">↓</span>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* SECTION 2 — ASCENSION MANIFESTO */}
@@ -42,18 +27,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* SCROLL HANDLERS */}
+      {/* SECTION 3 — 2×2 EDITORIAL CATEGORY PORTALS */}
+      <section className="w-full py-32 flex items-center justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-32 text-center text-lg font-light tracking-[0.15em] uppercase">
+          <a href="#leggings" className="hover:opacity-70 transition">Leggings</a>
+          <a href="#sport-bras" className="hover:opacity-70 transition">Sport Bras</a>
+          <a href="#tops" className="hover:opacity-70 transition">Tops</a>
+          <a href="#accessories" className="hover:opacity-70 transition">Accessories</a>
+        </div>
+      </section>
+
+      {/* SCROLL REVEAL LOGIC FOR SECTION 2 */}
       <script
         dangerouslySetInnerHTML={{
           __html: `
-            const cue = document.getElementById('scrollCue');
             const sec2 = document.getElementById('section2');
-            let dismissed = false;
             window.addEventListener('scroll', () => {
-              if (window.scrollY > 30 && !dismissed) {
-                cue.style.opacity = '0';
-                dismissed = true;
-              }
               if (window.scrollY > window.innerHeight * 0.1) {
                 sec2.style.opacity = '1';
               }
