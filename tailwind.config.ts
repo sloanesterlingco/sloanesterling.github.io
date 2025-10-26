@@ -20,7 +20,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [] // ← MUST BE EMPTY LIKE THIS
+  plugins: []
 };
 
 export default config;
