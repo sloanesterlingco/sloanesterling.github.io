@@ -4,7 +4,7 @@ export default function Home() {
       {/* FULL-SCREEN VIDEO HERO */}
       <div className="relative w-full h-screen overflow-hidden">
         <video
-          src="/assets/hero.mp4"
+          src="/hero.mp4"
           autoPlay
           loop
           muted
@@ -28,3 +28,4 @@ export default function Home() {
     </main>
   );
 }
+
