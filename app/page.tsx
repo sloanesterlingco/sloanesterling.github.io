@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen bg-titanium text-white">
       {/* FULL-SCREEN VIDEO HERO */}
       <div className="relative w-full h-screen overflow-hidden">
         <video
@@ -11,7 +11,8 @@ export default function Home() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/50" /> {/* dark elegant overlay */}
+        <div className="absolute inset-0 bg-black/50" />
+
         <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
           <h1 className="text-6xl md:text-8xl font-extrabold tracking-tight">
             LuxeSculpt™
