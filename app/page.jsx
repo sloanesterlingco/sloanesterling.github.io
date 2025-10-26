@@ -80,7 +80,7 @@ export default function Home() {
 
         {/* placeholder silhouette (auto-generated neutral asset) */}
         <Image
-  src="/leggings.png"
+  src="/legging.png"
   alt="LuxeSculpt™ Legging — HyperClean Reveal"
   width={1500}
   height={3000}
@@ -118,4 +118,5 @@ export default function Home() {
     </main>
   );
 }
+
 
