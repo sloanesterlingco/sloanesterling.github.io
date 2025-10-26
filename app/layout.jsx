@@ -22,7 +22,7 @@
   </header>
 
   {/* HERO + CONTENT — NO TOP PADDING */}
-  <div className="pt-0">{children}</div>
+{children}
 
   {/* SCROLL TRIGGER LOGIC */}
   <script dangerouslySetInnerHTML={{
