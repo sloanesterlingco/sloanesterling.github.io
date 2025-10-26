@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <main className="min-h-screen bg-titanium text-white">
+    <main className="min-h-screen bg-titanium text-white relative">
       {/* FULL-SCREEN VIDEO HERO */}
       <div className="relative w-full h-screen overflow-hidden">
         <video
@@ -11,21 +11,38 @@ export default function Home() {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/50" />
 
-        <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
-          <h1 className="text-6xl md:text-8xl font-extrabold tracking-tight">
-            LuxeSculpt™
-          </h1>
-          <p className="text-xl md:text-3xl text-neutral-300 mt-4 max-w-3xl">
-            Bioadaptive Athletic Architecture for Maximum Force, Minimal Fatigue.
-          </p>
-          <p className="text-neutral-400 text-sm md:text-base mt-3">
-            by <span className="text-white font-semibold">Sloane Sterling™</span>
-          </p>
+        {/* CINEMATIC SCROLL CUE — ENTER LUXESCULPT™ */}
+        <div
+          id="scrollCue"
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 opacity-0 transition-opacity duration-700 delay-1000 pointer-events-none"
+        >
+          <div className="flex flex-col items-center gap-3">
+            <span className="tracking-[0.2em] text-xs font-light">
+              ENTER LUXESCULPT™
+            </span>
+            <div className="relative w-8 h-8 rounded-full border border-white/40 flex items-center justify-center animate-pulse-slow">
+              <span className="text-sm">↓</span>
+            </div>
+          </div>
         </div>
       </div>
+
+      {/* VANISH SCROLL CUE ON FIRST SCROLL */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            const cue = document.getElementById('scrollCue');
+            let dismissed = false;
+            window.addEventListener('scroll', () => {
+              if (!dismissed) {
+                cue.style.opacity = '0';
+                dismissed = true;
+              }
+            });
+          `
+        }}
+      />
     </main>
   );
 }
-
