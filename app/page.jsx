@@ -80,13 +80,12 @@ export default function Home() {
 
         {/* placeholder silhouette (auto-generated neutral asset) */}
         <Image
-          src="https://dummyimage.com/600x1200/0a0a0a/ffffff&text=LuxeSculpt+Legging"
-          alt="LuxeSculpt™ Legging — HyperClean Reveal"
-          width={600}
-          height={1200}
-          className="opacity-0 animate-[fadeInUp_2.5s_ease-out_forwards]"
-        />
-
+  src="/leggings.png"
+  alt="LuxeSculpt™ Legging — HyperClean Reveal"
+  width={1500}
+  height={3000}
+  className="opacity-0 animate-[fadeInUp_2.5s_ease-out_forwards]"
+/>
         {/* caption */}
         <div className="absolute bottom-16 text-center px-6">
           <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4">
@@ -119,3 +118,4 @@ export default function Home() {
     </main>
   );
 }
+
