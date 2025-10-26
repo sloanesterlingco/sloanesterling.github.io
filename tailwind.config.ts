@@ -1,3 +1,9 @@
+const config: Config = {
+  darkMode: "class",
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}"
+  ],
   theme: {
     extend: {
       backgroundColor: {
@@ -14,5 +20,7 @@
       },
     },
   },
-  plugins: []    // ← leave empty for now
+  plugins: [] // ← MUST BE EMPTY LIKE THIS
 };
+
+export default config;
