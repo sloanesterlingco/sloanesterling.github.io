@@ -146,6 +146,27 @@ export default function Home() {
   </div>
 </section>
 
+      {/* ---------------------- SECTION 7 — ACCESS GATEWAY ---------------------- */}
+<section className="relative w-full bg-titanium py-44 px-12 md:px-24">
+  <div className="max-w-4xl">
+    <h2 className="text-5xl md:text-6xl font-bold tracking-tight leading-tight">
+      ENTER THE<br />
+      PRECISION COLLECTION
+    </h2>
+    <p className="mt-6 text-neutral-400 text-lg md:text-xl max-w-lg">
+      Engineered garments beyond performance.<br />
+      Access begins where endurance becomes evolution.
+    </p>
+
+    <a
+      href="#shop-motion"
+      className="inline-block mt-12 text-sm tracking-[0.25em] uppercase border border-white/20 bg-white/0 hover:bg-white/5 transition-all duration-500 px-10 py-4 rounded-full"
+    >
+      PROCEED
+    </a>
+  </div>
+</section>
+
       {/* ---------------- ANIMATION KEYFRAMES ---------------- */}
       <style jsx>{`
         @keyframes fadeInUp {
@@ -166,6 +187,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
