@@ -1,3 +1,5 @@
+"use client";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-titanium text-white overflow-x-hidden">
@@ -57,51 +59,6 @@ export default function Home() {
           <p className="text-neutral-400">Complete the motion system with adaptive-grip support gear.</p>
         </div>
       </section>
-
-      {/* ---------------------- SECTION 4 — HYPERCLEAN REVEAL ---------------------- */}
-      <section
-        id="leggings"
-        className="relative flex flex-col items-center justify-center min-h-screen bg-titanium"
-      >
-        {/* atmospheric aura */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/5 via-transparent to-white/0" />
-
-        {/* placeholder silhouette */}
-        <img
-          src="/placeholder-leggings.png"
-          alt="LuxeSculpt™ Legging — HyperClean Reveal"
-          className="w-auto h-[90vh] object-contain opacity-0 animate-[fadeInUp_2.5s_ease-out_forwards]"
-        />
-
-        {/* caption text */}
-        <div className="absolute bottom-16 text-center px-6">
-          <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4">
-            The LuxeSculpt™ Legging
-          </h2>
-          <p className="text-neutral-300 text-lg md:text-xl max-w-2xl mx-auto">
-            Full-body compression mapped with biomech precision.  
-            Crafted for flow. Built for force.
-          </p>
-        </div>
-      </section>
-
-      {/* ---------------------- ANIMATION KEYFRAMES ---------------------- */}
-      <style jsx>{`
-        @keyframes fadeInUp {
-          0% {
-            opacity: 0;
-            transform: translateY(80px);
-          }
-          33% {
-            opacity: 0;
-            transform: translateY(80px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
     </main>
   );
 }
