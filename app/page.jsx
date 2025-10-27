@@ -102,6 +102,7 @@ export default function Home() {
         {/* biomech lab glow background */}
         <div className="absolute inset-0 bg-gradient-to-b from-platinum/20 via-transparent to-transparent opacity-60 pointer-events-none" />
 
+        
         {/* biomech muscle activation visual */}
         <Image
           src="/leggings.png"
@@ -221,6 +222,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
