@@ -6,3 +6,18 @@ html, body {
   @apply bg-titanium text-white antialiased;
   min-height: 100%;
 }
+
+/* SECTION 8 — IMAGE HOVER EFFECTS */
+#section-8 .gallery-image {
+  opacity: 0.5;
+  transform: scale(1);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+#section-8 .gallery-image:hover {
+  opacity: 1;
+  transform: scale(1.03);
+}
