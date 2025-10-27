@@ -200,22 +200,7 @@ export default function Home() {
   </div>
 </section>
 
-      
-      /* SECTION 8 — IMAGE HOVER EFFECTS */
-#section-8 .gallery-image {
-  opacity: 0.5;
-  transform: scale(1);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-#section-8 .gallery-image:hover {
-  opacity: 1;
-  transform: scale(1.03);
-}
-    
+         
       {/* ---------------- ANIMATION KEYFRAMES ---------------- */}
       <style jsx>{`
         @keyframes fadeInUp {
@@ -236,6 +221,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
