@@ -122,7 +122,7 @@ export default function Home() {
         </div>
       </section>
 {/* ---------------------- SECTION 6 — MOTION PERFORMANCE ---------------------- */}
-<section className="relative flex flex-col items-center justify-center min-h-screen bg-titanium overflow-hidden">
+<section className="relative flex flex-col items-center justify-center py-32 bg-titanium overflow-hidden">
   {/* backdrop gradient for subtle kinetic depth */}
   <div className="absolute inset-0 bg-gradient-to-b from-black via-titanium to-black opacity-80" />
 
@@ -325,6 +325,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
