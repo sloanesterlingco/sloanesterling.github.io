@@ -132,13 +132,14 @@ export default function Home() {
   </div>
 
   {/* product silhouette or video placeholder */}
+ 
+<div className="w-full max-w-7xl mx-auto overflow-hidden" style={{ height: '600px' }}>
   <img
     src="/leggings.png"
-    alt="LuxeSculpt™ Motion Series"
-    width={1500}
-    height={3000}
-    className="relative z-10 object-contain max-h-[85vh] opacity-90 hover:opacity-100 transition duration-700 ease-atmospheric"
+    alt="Section visual"
+    className="w-full h-full object-cover"
   />
+</div>
 
   {/* text overlay */}
   <div className="relative z-20 mt-10 text-center">
@@ -324,6 +325,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
