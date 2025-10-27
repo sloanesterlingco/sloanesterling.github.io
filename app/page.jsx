@@ -201,7 +201,23 @@ export default function Home() {
 </div>
 
 </section>
-         
+
+      {/* SECTION 10 */}
+<section id="section-10" className="py-32 px-6 bg-black text-center">
+  <p className="text-gray-400 tracking-wide uppercase text-sm mb-6">
+    Performance Philosophy
+  </p>
+  <h2 className="text-4xl md:text-5xl font-semibold mb-6 leading-tight">
+    Engineered for evolution.
+  </h2>
+  <p className="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
+    Every decision is designed for progress — built for those who refuse comfort,
+    reject stagnation, and move with absolute intention. We are not chasing trends.
+    We are advancing performance.
+  </p>
+</section>
+
+      
       {/* ---------------- ANIMATION KEYFRAMES ---------------- */}
       <style jsx>{`
         @keyframes fadeInUp {
@@ -222,6 +238,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
