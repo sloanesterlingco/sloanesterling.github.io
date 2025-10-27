@@ -23,17 +23,16 @@ export default function RootLayout({ children }) {
             {/* LOGO */}
             {/* LOGO + ICON */}
 {/* LOGO + ICON */}
-<div className="flex items-center gap-3">
+<div className="flex items-center gap-2">
   <img 
-    src="/luxesculpt-icon.png"  // <-- rename this file exactly in /public
+    src="/luxesculpt-icon.png"   // this exact filename in /public
     alt="LuxeSculpt Icon" 
-    className="h-8 w-auto"       // <-- 10% larger presence, as requested
+    className="h-9 w-auto"        // increased from h-7 to h-9 (+20% presence)
   />
   <span className="text-lg font-semibold tracking-tight">
     LUXESCULPT™
   </span>
 </div>
-
             {/* NAV LINKS */}
             <nav className="flex gap-8 text-xs tracking-[0.15em]">
               <a href="#leggings" className="hover:opacity-70 transition">LEGGINGS</a>
