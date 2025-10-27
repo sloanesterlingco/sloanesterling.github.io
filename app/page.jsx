@@ -98,7 +98,7 @@ export default function Home() {
         </div>
       </section>
       {/* ---------------------- SECTION 5 — BIOMECHANICAL AWAKENING ---------------------- */}
-      <section className="relative flex flex-col items-center justify-center min-h-screen bg-titanium">
+      <section className="relative flex flex-col items-center justify-center py-32 bg-titanium">
         {/* biomech lab glow background */}
         <div className="absolute inset-0 bg-gradient-to-b from-platinum/20 via-transparent to-transparent opacity-60 pointer-events-none" />
 
@@ -320,6 +320,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
