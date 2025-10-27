@@ -104,11 +104,14 @@ export default function Home() {
 
         
         {/* biomech muscle activation visual */}
-        <img 
-  src="/your-image.jpg" 
-  alt="Section visual" 
-  className="w-full object-cover aspect-[16/9]" 
-/>
+       <div className="w-full max-w-7xl mx-auto aspect-[16/9] overflow-hidden">
+  <img 
+    src="/your-image.jpg" 
+    alt="Section visual" 
+    className="w-full h-full object-cover" 
+  />
+</div>
+
 
         {/* silent clinical status code */}
         <div className="absolute bottom-12 text-center">
@@ -320,6 +323,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
