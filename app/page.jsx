@@ -104,13 +104,11 @@ export default function Home() {
 
         
         {/* biomech muscle activation visual */}
-        <Image
-          src="/leggings.png"
-          alt="LuxeSculpt™ Biomech Activation"
-          width={1500}
-          height={3000}
-          className="opacity-0 animate-biomech-scan object-contain max-h-[90vh]"
-        />
+        <img 
+  src="/your-image.jpg" 
+  alt="Section visual" 
+  className="w-full object-cover aspect-[16/9]" 
+/>
 
         {/* silent clinical status code */}
         <div className="absolute bottom-12 text-center">
@@ -322,6 +320,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
