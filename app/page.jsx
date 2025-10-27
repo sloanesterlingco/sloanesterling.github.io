@@ -171,9 +171,9 @@ export default function Home() {
 <section id="section-8" class="py-24 px-6 bg-black">
   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
     
-    <div class="image-wrapper">
-      <img src="IMAGE-1.jpg" alt="Shop Category 1" class="gallery-image">
-    </div>
+    <div className="image-wrapper">
+  <img src="IMAGE-1.jpg" alt="Shop Category 1" className="gallery-image" />
+</div>
 
     <div class="image-wrapper">
       <img src="IMAGE-2.jpg" alt="Shop Category 2" class="gallery-image">
@@ -234,6 +234,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
