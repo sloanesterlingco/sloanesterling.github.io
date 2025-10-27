@@ -122,42 +122,42 @@ export default function Home() {
         </div>
       </section>
 {/* ---------------------- SECTION 6 — MOTION PERFORMANCE ---------------------- */}
-<section className="relative flex flex-col items-center justify-center bg-titanium overflow-hidden">
+<section className="relative flex flex-col items-center justify-center bg-titanium overflow-hidden mb-24">
   <div className="w-full max-w-5xl mx-auto overflow-hidden" style={{ height: '600px' }}>
     <img 
-      src="/leggings.png"   // ← replace with correct image per section
+      src="/tops.png"
       alt="Section visual"
       className="w-full h-full object-cover"
     />
   </div>
 
-  {/* text overlay stays below */}
   <div className="relative z-20 mt-10 text-center">
     <h2 className="text-4xl md:text-6xl font-bold tracking-tight">Motion Perfected</h2>
-    <p className="mt-4 text-neutral-300 max-w-xl">
+    <p className="mt-4 text-neutral-300 max-w-xl mx-auto">
       Engineered for continuous flow. Every fiber aligned for balance, strength, and forward drive.
     </p>
   </div>
 </section>
+
 
       {/* ---------------------- SECTION 7 — ACCESS GATEWAY ---------------------- */}
 <section className="relative flex flex-col items-center justify-center bg-titanium overflow-hidden">
   <div className="w-full max-w-5xl mx-auto overflow-hidden" style={{ height: '600px' }}>
     <img 
-      src="/leggings.png"   // ← replace with correct image per section
+      src="/sportbra.png"
       alt="Section visual"
       className="w-full h-full object-cover"
     />
   </div>
 
-  {/* text overlay stays below */}
   <div className="relative z-20 mt-10 text-center">
-    <h2 className="text-4xl md:text-6xl font-bold tracking-tight">Motion Perfected</h2>
-    <p className="mt-4 text-neutral-300 max-w-xl">
-      Engineered for continuous flow. Every fiber aligned for balance, strength, and forward drive.
+    <h2 className="text-4xl md:text-6xl font-bold tracking-tight">Velocity Unlocked</h2>
+    <p className="mt-4 text-neutral-300 max-w-xl mx-auto">
+      Acceleration without compromise. Stabilized form, higher output, and precise control under rising intensity.
     </p>
   </div>
 </section>
+
 
    {/* SECTION 8 */}
 <section id="section-8" className="py-24 px-6 bg-black">
@@ -313,6 +313,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
