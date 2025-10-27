@@ -167,20 +167,28 @@ export default function Home() {
   </div>
 </section>
 
-      {/* ---------------------- SECTION 8 — LUXESCULPT MOTION OS ---------------------- */}
+     {/* ---------------------- SECTION 8 — LUXESCULPT MOTION OS ---------------------- */}
 <section
   id="shop-motion"
   className="relative w-full bg-titanium py-32 overflow-hidden flex gap-20 snap-x snap-mandatory scroll-smooth justify-center items-center px-8"
 >
-  {/* Product Tiles */}
-  <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full max-w-7xl">
-    
-    {/* Module 1 — LEGGINGS (active by default) */}
-    <div className="group relative transition-all duration-500 ease-[cubic-bezier(.4,0,.2,1)]">
+  {/* Autonomous Ascended Drift */}
+  <style>{`
+    @keyframes ascended-drift {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-40px); }
+    }
+  `}</style>
+
+  <div
+    className="flex gap-20 animate-[ascended-drift_22s_ease-in-out_infinite_alternate]"
+  >
+    {/* Module 1 — Active by DEFAULT */}
+    <div className="group relative transition-all duration-300 ease-[cubic-bezier(.4,0,.2,1)] opacity-100 snap-center shrink-0 w-[70vw] max-w-xl">
       <img
         src="/leggings.png"
-        alt="LuxeSculpt Performance Leggings"
-        className="w-full h-auto object-cover rounded-3xl border border-white/10 opacity-100 group-hover:opacity-100 transition-opacity duration-500"
+        alt="LuxeSculpt™ Motion Leggings"
+        className="w-full h-auto object-cover rounded-3xl border border-white/10"
       />
       <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700" />
       <div className="absolute bottom-6 left-6 text-left">
@@ -189,12 +197,12 @@ export default function Home() {
       </div>
     </div>
 
-    {/* Module 2 — SPORT BRAS */}
-    <div className="group relative transition-all duration-500 ease-[cubic-bezier(.4,0,.2,1)] opacity-35 hover:opacity-100">
+    {/* Module 2 — Sport Bra */}
+    <div className="group relative transition-all duration-300 ease-[cubic-bezier(.4,0,.2,1)] opacity-35 hover:opacity-100 snap-center shrink-0 w-[70vw] max-w-xl">
       <img
         src="/sportbra.png"
-        alt="LuxeSculpt Performance Sport Bra"
-        className="w-full h-auto object-cover rounded-3xl border border-white/10 transition-all duration-500"
+        alt="MotionCore™ Sport Bra"
+        className="w-full h-auto object-cover rounded-3xl border border-white/10"
       />
       <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700" />
       <div className="absolute bottom-6 left-6 text-left">
@@ -203,20 +211,19 @@ export default function Home() {
       </div>
     </div>
 
-    {/* Module 3 — TOPS */}
-    <div className="group relative transition-all duration-500 ease-[cubic-bezier(.4,0,.2,1)] opacity-35 hover:opacity-100">
+    {/* Module 3 — Tops */}
+    <div className="group relative transition-all duration-300 ease-[cubic-bezier(.4,0,.2,1)] opacity-35 hover:opacity-100 snap-center shrink-0 w-[70vw] max-w-xl">
       <img
         src="/tops.png"
-        alt="LuxeSculpt Performance Tops"
-        className="w-full h-auto object-cover rounded-3xl border border-white/10 transition-all duration-500"
+        alt="NeuralWeave™ Tops"
+        className="w-full h-auto object-cover rounded-3xl border border-white/10"
       />
       <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700" />
       <div className="absolute bottom-6 left-6 text-left">
         <h3 className="text-2xl font-bold tracking-tight mb-1">NeuralWeave™ Tops</h3>
-        <p className="text-neutral-400 text-sm max-w-xs">Engineered for motion feedback and skin-aligned cooling layers.</p>
+        <p className="text-neutral-400 text-sm max-w-xs">Motion-synced ventilation powered by biomech-responsive fibers.</p>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -240,6 +247,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
