@@ -264,7 +264,11 @@ export default function Home() {
 
     {/* RIGHT — PRODUCT VISUAL */}
     <div className="w-full flex justify-center">
-      <img src="/leggings.png" alt="Elite Performance Leggings" className="w-full max-w-md object-cover" />
+     <img
+  src="/leggings.png"
+  alt="Elite Performance Leggings"
+  className="w-full max-w-md max-h-[500px] object-cover"
+/>
     </div>
 
   </div>
@@ -291,6 +295,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
