@@ -79,13 +79,13 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-white/5 via-transparent to-transparent" />
 
         {/* placeholder silhouette (auto-generated neutral asset) */}
-        <Image
-  src="/leggings.png"
-  alt="LuxeSculpt™ Legging — HyperClean Reveal"
-  width={1500}
-  height={3000}
-  className="opacity-0 animate-[fadeInUp_2.5s_ease-out_forwards]"
-/>
+       <div className="w-full max-w-7xl mx-auto overflow-hidden" style={{ height: '600px' }}>
+  <img 
+    src="/your-image.jpg" 
+    alt="Section visual" 
+    className="w-full h-full object-cover" 
+  />
+</div>
         {/* caption */}
         <div className="absolute bottom-16 text-center px-6">
           <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4">
@@ -324,6 +324,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
