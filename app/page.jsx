@@ -79,7 +79,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-white/5 via-transparent to-transparent" />
 
         {/* placeholder silhouette (auto-generated neutral asset) */}
-       <div className="w-full max-w-7xl mx-auto overflow-hidden" style={{ height: '600px' }}>
+      <div className="w-full overflow-hidden" style={{ height: '600px' }}>
   <img 
     src="/leggings.png" 
     alt="Section visual" 
@@ -313,6 +313,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
