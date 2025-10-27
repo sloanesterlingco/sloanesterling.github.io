@@ -72,31 +72,30 @@ export default function Home() {
 
       {/* ---------------- SECTION 4 — HYPERCLEAN REVEAL ---------------- */}
       <section
-        id="leggings"
-        className="relative flex flex-col items-center justify-center bg-titanium py-32"
-      >
-        {/* atmospheric aura */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/5 via-transparent to-transparent" />
+  id="leggings"
+  className="relative w-full bg-titanium overflow-hidden"
+>
+  {/* full-width cinematic image with controlled height */}
+  <div className="w-full overflow-hidden" style={{ height: '600px' }}>
+    <img
+      src="/leggings.png"
+      alt="The LuxeSculpt Legging"
+      className="w-full h-full object-cover"
+    />
+  </div>
 
-        {/* placeholder silhouette (auto-generated neutral asset) */}
-      <div className="w-full overflow-hidden" style={{ height: '600px' }}>
-  <img 
-    src="/leggings.png" 
-    alt="Section visual" 
-    className="w-full h-full object-cover" 
-  />
-</div>
-        {/* caption */}
-        <div className="absolute bottom-16 text-center px-6">
-          <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4">
-            The LuxeSculpt™ Legging
-          </h2>
-          <p className="text-neutral-300 text-lg md:text-xl max-w-2xl mx-auto">
-            Full-body compression mapped with biomech precision.<br />
-            Crafted for flow. Built for force.
-          </p>
-        </div>
-      </section>
+  {/* centered overlay text — premium editorial */}
+  <div className="absolute bottom-16 left-1/2 -translate-x-1/2 text-center px-6 z-20">
+    <h2 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4">
+      The LuxeSculpt™ Legging
+    </h2>
+    <p className="text-neutral-300 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
+      Full-body compression mapped with biomech precision.<br />
+      Crafted for flow. Built for force.
+    </p>
+  </div>
+</section>
+
       {/* ---------------------- SECTION 5 — BIOMECHANICAL AWAKENING ---------------------- */}
       <section className="relative flex flex-col items-center justify-center py-32 bg-titanium">
         {/* biomech lab glow background */}
@@ -313,6 +312,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
