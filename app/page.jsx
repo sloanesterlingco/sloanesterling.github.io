@@ -81,7 +81,7 @@ export default function Home() {
         {/* placeholder silhouette (auto-generated neutral asset) */}
        <div className="w-full max-w-7xl mx-auto overflow-hidden" style={{ height: '600px' }}>
   <img 
-    src="/your-image.jpg" 
+    src="/leggings.png" 
     alt="Section visual" 
     className="w-full h-full object-cover" 
   />
@@ -324,6 +324,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
