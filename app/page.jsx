@@ -167,66 +167,41 @@ export default function Home() {
   </div>
 </section>
 
-     {/* ---------------------- SECTION 8 — LUXESCULPT MOTION OS ---------------------- */}
-<section
-  id="shop-motion"
-  className="relative w-full bg-titanium py-32 overflow-hidden flex gap-20 snap-x snap-mandatory scroll-smooth justify-center items-center px-8"
->
-  {/* Autonomous Ascended Drift */}
-  <style>{`
-    @keyframes ascended-drift {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-40px); }
-    }
-  `}</style>
-
-  <div
-    className="flex gap-20 animate-[ascended-drift_22s_ease-in-out_infinite_alternate]"
-  >
-    {/* Module 1 — Active by DEFAULT */}
-    <div className="group relative transition-all duration-300 ease-[cubic-bezier(.4,0,.2,1)] opacity-100 snap-center shrink-0 w-[70vw] max-w-xl">
-      <img
-        src="/leggings.png"
-        alt="LuxeSculpt™ Motion Leggings"
-        className="w-full h-auto object-cover rounded-3xl border border-white/10"
-      />
-      <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700" />
-      <div className="absolute bottom-6 left-6 text-left">
-        <h3 className="text-2xl font-bold tracking-tight mb-1">LuxeSculpt™ Leggings</h3>
-        <p className="text-neutral-400 text-sm max-w-xs">Bioadaptive compression engineered for sustained kinetic output.</p>
-      </div>
+      <!-- SECTION 8 -->
+<section id="section-8" class="py-24 px-6 bg-black">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 section-8-gallery">
+    
+    <div class="image-wrapper">
+      <img src="IMAGE-1.jpg" alt="Shop Category 1" class="gallery-image">
     </div>
 
-    {/* Module 2 — Sport Bra */}
-    <div className="group relative transition-all duration-300 ease-[cubic-bezier(.4,0,.2,1)] opacity-35 hover:opacity-100 snap-center shrink-0 w-[70vw] max-w-xl">
-      <img
-        src="/sportbra.png"
-        alt="MotionCore™ Sport Bra"
-        className="w-full h-auto object-cover rounded-3xl border border-white/10"
-      />
-      <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700" />
-      <div className="absolute bottom-6 left-6 text-left">
-        <h3 className="text-2xl font-bold tracking-tight mb-1">MotionCore™ Sport Bra</h3>
-        <p className="text-neutral-400 text-sm max-w-xs">Adaptive chest support with temperature-responsive microfibers.</p>
-      </div>
+    <div class="image-wrapper">
+      <img src="IMAGE-2.jpg" alt="Shop Category 2" class="gallery-image">
     </div>
 
-    {/* Module 3 — Tops */}
-    <div className="group relative transition-all duration-300 ease-[cubic-bezier(.4,0,.2,1)] opacity-35 hover:opacity-100 snap-center shrink-0 w-[70vw] max-w-xl">
-      <img
-        src="/tops.png"
-        alt="NeuralWeave™ Tops"
-        className="w-full h-auto object-cover rounded-3xl border border-white/10"
-      />
-      <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700" />
-      <div className="absolute bottom-6 left-6 text-left">
-        <h3 className="text-2xl font-bold tracking-tight mb-1">NeuralWeave™ Tops</h3>
-        <p className="text-neutral-400 text-sm max-w-xs">Motion-synced ventilation powered by biomech-responsive fibers.</p>
-      </div>
+    <div class="image-wrapper">
+      <img src="IMAGE-3.jpg" alt="Shop Category 3" class="gallery-image">
     </div>
+
   </div>
 </section>
 
+<style>
+  #section-8 .gallery-image {
+    opacity: 0.5;
+    transform: scale(1);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  #section-8 .gallery-image:hover {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+</style>
+
+    
       {/* ---------------- ANIMATION KEYFRAMES ---------------- */}
       <style jsx>{`
         @keyframes fadeInUp {
@@ -247,6 +222,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
