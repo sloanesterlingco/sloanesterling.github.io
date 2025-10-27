@@ -1,5 +1,12 @@
 import "./../styles/globals.css";
-
+export const metadata = {
+  title: "LUXESCULPT™",
+  icons: {
+    icon: "/favicon-32x32.png",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+};
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
