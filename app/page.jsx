@@ -217,6 +217,32 @@ export default function Home() {
   </p>
 </section>
 
+      {/* SECTION 11 */}
+<section id="section-11" className="py-32 px-6 bg-black">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-12">
+
+    {/* LEFT — TEXT INTRO */}
+    <div>
+      <p className="text-gray-400 tracking-wide uppercase text-sm mb-4">
+        The Foundation
+      </p>
+      <h2 className="text-4xl md:text-5xl font-semibold mb-6 leading-tight">
+        The foundation of performance.
+      </h2>
+      <p className="text-gray-400 text-lg leading-relaxed max-w-lg">
+        Precision-built from the core — engineered to stabilize, support, and
+        unlock full athletic output. This is where true performance begins.
+      </p>
+    </div>
+
+    {/* RIGHT — PRODUCT VISUAL */}
+    <div className="w-full flex justify-center">
+      <img src="/sportbra.png" alt="Performance Sports Bra" className="w-full max-w-md object-cover" />
+    </div>
+
+  </div>
+</section>
+
       
       {/* ---------------- ANIMATION KEYFRAMES ---------------- */}
       <style jsx>{`
@@ -238,6 +264,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
