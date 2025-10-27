@@ -192,7 +192,7 @@ export default function Home() {
     Recognized by the world’s most influential fashion voices.
   </p>
 <div className="flex justify-center items-center gap-16 opacity-60">
-  <img src="/logos/vogue.svg" alt="Vogue" className="h-6" />
+  <img src="https://sloanesterling-github-io-git-main-sloane-sterlings-projects.vercel.app/logos/vogue.svg" alt="Vogue" className="h-6" />
   <img src="/logos/gq.svg" alt="GQ" className="h-6" />
   <img src="/logos/harpersbazaar.svg" alt="Harper's Bazaar" className="h-6" />
   <img src="/logos/forbes.svg" alt="Forbes" className="h-6" />
@@ -221,6 +221,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
