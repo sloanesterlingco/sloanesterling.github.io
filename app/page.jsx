@@ -191,13 +191,14 @@ export default function Home() {
   <p className="text-gray-300 tracking-wide uppercase text-sm mb-12">
     Recognized by the world’s most influential fashion voices.
   </p>
-  <div className="flex justify-center items-center gap-16 opacity-60">
-    <img src="/logos/vogue.svg" alt="Vogue" className="h-6" />
-    <img src="/logos/gq.svg" alt="GQ" className="h-6" />
-    <img src="/logos/harpersbazaar.svg" alt="Harper’s Bazaar" className="h-6" />
-    <img src="/logos/forbes.svg" alt="Forbes" className="h-6" />
-    <img src="/logos/elle.svg" alt="Elle" className="h-6" />
-  </div>
+<div className="flex justify-center items-center gap-16 opacity-60">
+  <img src="/logos/vogue.svg" alt="Vogue" className="h-6" />
+  <img src="/logos/gq.svg" alt="GQ" className="h-6" />
+  <img src="/logos/harpersbazaar.svg" alt="Harper's Bazaar" className="h-6" />
+  <img src="/logos/forbes.svg" alt="Forbes" className="h-6" />
+  <img src="/logos/elle.svg" alt="Elle" className="h-6" />
+</div>
+
 </section>
          
       {/* ---------------- ANIMATION KEYFRAMES ---------------- */}
@@ -220,6 +221,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
