@@ -1,77 +1,45 @@
-import "./../styles/globals.css";
+// app/layout.jsx
+
+import "./globals.css";
 
 export const metadata = {
-  title: "LUXESCULPT™",
-  icons: {
-    icon: "/favicon-32x32.png",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
-  },
+  title: "LUXESCULPT™ — Performance House",
+  description: "Luxury-engineered performance systems by LUXESCULPT™",
 };
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="dark">
-      <body className="font-sans bg-titanium text-white overflow-x-hidden">
-
-        {/* ULTRA-SUBTLE GLASS NAV — VISIBLE FROM START, STRENGTHENS ON SCROLL */}
-        <header
-          id="luxenav"
-          className="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-black/20 transition-all duration-700 ease-[cubic-bezier(.4,0,.2,1)]"
-        >
-          <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
-
-            {/* MASTER LOGO + DIVISION NAV */}
-            <div className="flex items-center gap-6">
-              {/* ICON + LUXESCULPT */}
-              <div className="flex items-center gap-2">
-                <img 
-                  src="/luxesculpt-icon.png"
-                  alt="LuxeSculpt Icon" 
-                  className="h-9 w-auto"
-                />
-                <span className="text-lg font-semibold tracking-tight hover:opacity-70 transition">
-                  LUXESCULPT™ — RUNNING
-                </span>
-              </div>
-
-              {/* SEPARATOR — S0 (ultra-minimal) */}
-              <span className="opacity-30 text-sm select-none">|</span>
-
-              {/* LUXEGOAT */}
-              <span className="text-lg font-semibold tracking-tight hover:opacity-70 transition">
-                LUXEGOAT™ — TRAIL
-              </span>
-            </div>
-
-            {/* NAV LINKS */}
-            <nav className="flex gap-8 text-xs tracking-[0.15em]">
-              <a href="#leggings" className="hover:opacity-70 transition">LEGGINGS</a>
-              <a href="#sport-bras" className="hover:opacity-70 transition">SPORT BRAS</a>
-              <a href="#tops" className="hover:opacity-70 transition">TOPS</a>
-              <a href="#accessories" className="hover:opacity-70 transition">ACCESSORIES</a>
-            </nav>
-
+    <html lang="en">
+      <body className="bg-black text-white antialiased">
+        {/* NAVBAR */}
+        <header className="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-10 py-6 backdrop-blur-sm bg-transparent">
+          {/* LOGO / BRAND */}
+          <div className="text-lg font-semibold tracking-tight select-none hover:opacity-80 transition">
+            LUXESCULPT™
           </div>
+
+          {/* DIVISION NAV */}
+          <nav className="flex items-center gap-8 text-sm font-medium tracking-tight uppercase">
+            <a href="/luxrun" className="opacity-80 hover:opacity-100 transition">
+              LUXRUN™
+            </a>
+            <span className="opacity-30 select-none">|</span>
+            <a href="/luxgoat" className="opacity-80 hover:opacity-100 transition">
+              LUXGOAT™
+            </a>
+            <span className="opacity-30 select-none">|</span>
+            <a href="/luxflow" className="opacity-80 hover:opacity-100 transition">
+              LUXFLOW™
+            </a>
+            <span className="opacity-30 select-none">|</span>
+            <a href="/luxcycle" className="opacity-80 hover:opacity-100 transition">
+              LUXCYCLE™
+            </a>
+          </nav>
         </header>
 
-        {/* HERO + CONTENT — ZERO GAP */}
-        {children}
-
-        {/* SCROLL INTENSITY LOGIC */}
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            const nav = document.getElementById('luxenav');
-            window.addEventListener('scroll', () => {
-              if (window.scrollY > 30) {
-                nav.style.background = 'rgba(0, 0, 0, 0.4)';
-              } else {
-                nav.style.background = 'rgba(0, 0, 0, 0.2)';
-              }
-            });
-          `
-        }} />
-
+        {/* MAIN CONTENT */}
+        <main className="pt-24">{children}</main>
       </body>
     </html>
   );
