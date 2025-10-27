@@ -167,20 +167,20 @@ export default function Home() {
   </div>
 </section>
 
-     {/* SECTION 8 */}
+   {/* SECTION 8 */}
 <section id="section-8" className="py-24 px-6 bg-black">
   <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-    
+
     <div className="image-wrapper">
-      <img src="IMAGE-1.jpg" alt="Shop Category 1" className="gallery-image" />
+      <img src="/sportbra.png" alt="Shop Sports Bras" className="gallery-image" />
     </div>
 
     <div className="image-wrapper">
-      <img src="IMAGE-2.jpg" alt="Shop Category 2" className="gallery-image" />
+      <img src="/tops.png" alt="Shop Tops" className="gallery-image" />
     </div>
 
     <div className="image-wrapper">
-      <img src="IMAGE-3.jpg" alt="Shop Category 3" className="gallery-image" />
+      <img src="/leggings.png" alt="Shop Leggings" className="gallery-image" />
     </div>
 
   </div>
@@ -192,14 +192,13 @@ export default function Home() {
     Recognized by the world’s most influential fashion voices.
   </p>
   <div className="flex justify-center items-center gap-16 opacity-60">
-    <img src="VOGUE-LOGO.svg" alt="Vogue" className="h-6" />
-    <img src="GQ-LOGO.svg" alt="GQ" className="h-6" />
-    <img src="HARPER-LOGO.svg" alt="Harper's Bazaar" className="h-6" />
-    <img src="FORBES-LOGO.svg" alt="Forbes" className="h-6" />
-    <img src="ELLE-LOGO.svg" alt="Elle" className="h-6" />
+    <img src="/logos/vogue.svg" alt="Vogue" className="h-6" />
+    <img src="/logos/gq.svg" alt="GQ" className="h-6" />
+    <img src="/logos/harpersbazaar.svg" alt="Harper’s Bazaar" className="h-6" />
+    <img src="/logos/forbes.svg" alt="Forbes" className="h-6" />
+    <img src="/logos/elle.svg" alt="Elle" className="h-6" />
   </div>
 </section>
-
          
       {/* ---------------- ANIMATION KEYFRAMES ---------------- */}
       <style jsx>{`
@@ -221,6 +220,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
