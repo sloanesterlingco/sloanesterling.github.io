@@ -106,7 +106,7 @@ export default function Home() {
         {/* biomech muscle activation visual */}
        <div className="w-full max-w-7xl mx-auto aspect-[16/9] overflow-hidden">
  <img 
-  src="/your-image.jpg" 
+  src="/leggings.png" 
   alt="Section visual" 
   className="w-full object-cover max-h-[900px] mx-auto"
 />
@@ -324,6 +324,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
