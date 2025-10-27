@@ -167,38 +167,40 @@ export default function Home() {
   </div>
 </section>
 
-      {/* SECTION 8 */}
-<section id="section-8" class="py-24 px-6 bg-black">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+     {/* SECTION 8 */}
+<section id="section-8" className="py-24 px-6 bg-black">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
     
     <div className="image-wrapper">
-  <img src="IMAGE-1.jpg" alt="Shop Category 1" className="gallery-image" />
-</div>
-
-    <div class="image-wrapper">
-      <img src="IMAGE-2.jpg" alt="Shop Category 2" class="gallery-image">
+      <img src="IMAGE-1.jpg" alt="Shop Category 1" className="gallery-image" />
     </div>
 
-    <div class="image-wrapper">
-      <img src="IMAGE-3.jpg" alt="Shop Category 3" class="gallery-image">
+    <div className="image-wrapper">
+      <img src="IMAGE-2.jpg" alt="Shop Category 2" className="gallery-image" />
+    </div>
+
+    <div className="image-wrapper">
+      <img src="IMAGE-3.jpg" alt="Shop Category 3" className="gallery-image" />
     </div>
 
   </div>
 </section>
 
-      {/* SECTION 9 */}
-<section id="section-9" class="py-20 bg-black text-center">
-  <p class="text-gray-300 tracking-wide uppercase text-sm mb-12">
+{/* SECTION 9 */}
+<section id="section-9" className="py-20 bg-black text-center">
+  <p className="text-gray-300 tracking-wide uppercase text-sm mb-12">
     Recognized by the world’s most influential fashion voices.
   </p>
-  <div class="flex justify-center items-center gap-16 opacity-60">
-    <img src="VOGUE-LOGO.svg" alt="Vogue" class="h-6">
-    <img src="GQ-LOGO.svg" alt="GQ" class="h-6">
-    <img src="HARPER-LOGO.svg" alt="Harper's Bazaar" class="h-6">
-    <img src="FORBES-LOGO.svg" alt="Forbes" class="h-6">
-    <img src="ELLE-LOGO.svg" alt="Elle" class="h-6">
+  <div className="flex justify-center items-center gap-16 opacity-60">
+    <img src="VOGUE-LOGO.svg" alt="Vogue" className="h-6" />
+    <img src="GQ-LOGO.svg" alt="GQ" className="h-6" />
+    <img src="HARPER-LOGO.svg" alt="Harper's Bazaar" className="h-6" />
+    <img src="FORBES-LOGO.svg" alt="Forbes" className="h-6" />
+    <img src="ELLE-LOGO.svg" alt="Elle" className="h-6" />
   </div>
 </section>
+
+      
       /* SECTION 8 — IMAGE HOVER EFFECTS */
 #section-8 .gallery-image {
   opacity: 0.5;
@@ -234,6 +236,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
