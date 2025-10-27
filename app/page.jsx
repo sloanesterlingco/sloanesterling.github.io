@@ -167,45 +167,54 @@ export default function Home() {
   </div>
 </section>
 
-     {/* ---------------------- SECTION 8 — LUXESCULPT MOTION OS ---------------------- */}
+      {/* ---------------------- SECTION 8 — LUXESCULPT MOTION OS ---------------------- */}
 <section
   id="shop-motion"
-  className="relative w-full bg-titanium py-32 overflow-hidden flex gap-20 snap-x snap-mandatory scroll-smooth"
+  className="relative w-full bg-titanium py-32 overflow-hidden flex gap-20 snap-x snap-mandatory scroll-smooth justify-center items-center px-8"
 >
-  {/* Autonomous drift */}
-  <style>{`
-    @keyframes drift {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-40px); }
-    }
-  `}</style>
-
-  <div
-    className="flex gap-20 animate-[drift_18s_linear_infinite_alternate]"
-  >
-
-    {/* MODULE 1 — ACTIVE / CENTER */}
-    <div className="snap-center shrink-0 w-[70vw] max-w-xl mx-auto relative">
+  {/* Product Tiles */}
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-12 w-full max-w-7xl">
+    
+    {/* Module 1 — LEGGINGS (active by default) */}
+    <div className="group relative transition-all duration-500 ease-[cubic-bezier(.4,0,.2,1)]">
       <img
         src="/leggings.png"
-        alt="LuxeSculpt™ Motion Leggings"
-        className="w-full object-contain opacity-100 transition duration-700 ease-atmospheric"
+        alt="LuxeSculpt Performance Leggings"
+        className="w-full h-auto object-cover rounded-3xl border border-white/10 opacity-100 group-hover:opacity-100 transition-opacity duration-500"
       />
-      {/* Live biomech glow */}
-      <div className="absolute inset-0 pointer-events-none bg-gradient-to-b from-transparent via-white/10 to-transparent opacity-0 animate-[pulse_3s_infinite]" />
-      <p className="text-xs tracking-[0.3em] text-platinum/50 mt-6 uppercase text-center">
-        SYSTEM MODULE: LOWER-LIMB FORCE OUTPUT A1
-      </p>
+      <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700" />
+      <div className="absolute bottom-6 left-6 text-left">
+        <h3 className="text-2xl font-bold tracking-tight mb-1">LuxeSculpt™ Leggings</h3>
+        <p className="text-neutral-400 text-sm max-w-xs">Bioadaptive compression engineered for sustained kinetic output.</p>
+      </div>
     </div>
 
-    {/* GHOST 2 — Right */}
-    <div className="snap-center shrink-0 w-[70vw] max-w-xl opacity-30 blur-[2px] hover:opacity-100 hover:blur-0 transition duration-700">
-      <img src="/leggings.png" alt="Upcoming Module" className="w-full object-contain" />
+    {/* Module 2 — SPORT BRAS */}
+    <div className="group relative transition-all duration-500 ease-[cubic-bezier(.4,0,.2,1)] opacity-35 hover:opacity-100">
+      <img
+        src="/sportbra.png"
+        alt="LuxeSculpt Performance Sport Bra"
+        className="w-full h-auto object-cover rounded-3xl border border-white/10 transition-all duration-500"
+      />
+      <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700" />
+      <div className="absolute bottom-6 left-6 text-left">
+        <h3 className="text-2xl font-bold tracking-tight mb-1">MotionCore™ Sport Bra</h3>
+        <p className="text-neutral-400 text-sm max-w-xs">Adaptive chest support with temperature-responsive microfibers.</p>
+      </div>
     </div>
 
-    {/* GHOST 3 — Left */}
-    <div className="snap-center shrink-0 w-[70vw] max-w-xl opacity-30 blur-[2px] hover:opacity-100 hover:blur-0 transition duration-700">
-      <img src="/leggings.png" alt="Upcoming Module" className="w-full object-contain" />
+    {/* Module 3 — TOPS */}
+    <div className="group relative transition-all duration-500 ease-[cubic-bezier(.4,0,.2,1)] opacity-35 hover:opacity-100">
+      <img
+        src="/tops.png"
+        alt="LuxeSculpt Performance Tops"
+        className="w-full h-auto object-cover rounded-3xl border border-white/10 transition-all duration-500"
+      />
+      <div className="absolute inset-0 rounded-3xl bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-700" />
+      <div className="absolute bottom-6 left-6 text-left">
+        <h3 className="text-2xl font-bold tracking-tight mb-1">NeuralWeave™ Tops</h3>
+        <p className="text-neutral-400 text-sm max-w-xs">Engineered for motion feedback and skin-aligned cooling layers.</p>
+      </div>
     </div>
 
   </div>
@@ -231,6 +240,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
