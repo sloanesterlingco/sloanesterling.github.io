@@ -167,9 +167,9 @@ export default function Home() {
   </div>
 </section>
 
-      <!-- SECTION 8 -->
+<!-- SECTION 8 -->
 <section id="section-8" class="py-24 px-6 bg-black">
-  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 section-8-gallery">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
     
     <div class="image-wrapper">
       <img src="IMAGE-1.jpg" alt="Shop Category 1" class="gallery-image">
@@ -186,21 +186,20 @@ export default function Home() {
   </div>
 </section>
 
-<style>
-  #section-8 .gallery-image {
-    opacity: 0.5;
-    transform: scale(1);
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-    width: 100%;
-    height: auto;
-    display: block;
-  }
-  #section-8 .gallery-image:hover {
-    opacity: 1;
-    transform: scale(1.03);
-  }
-</style>
+      /* SECTION 8 — IMAGE HOVER EFFECTS */
+#section-8 .gallery-image {
+  opacity: 0.5;
+  transform: scale(1);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  width: 100%;
+  height: auto;
+  display: block;
+}
 
+#section-8 .gallery-image:hover {
+  opacity: 1;
+  transform: scale(1.03);
+}
     
       {/* ---------------- ANIMATION KEYFRAMES ---------------- */}
       <style jsx>{`
@@ -222,6 +221,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
