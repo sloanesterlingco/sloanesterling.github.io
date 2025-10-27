@@ -185,7 +185,19 @@ export default function Home() {
 
   </div>
 </section>
-
+<!-- SECTION 9 -->
+<section id="section-9" class="py-20 bg-black text-center">
+  <p class="text-gray-300 tracking-wide uppercase text-sm mb-12">
+    Recognized by the world’s most influential fashion voices.
+  </p>
+  <div class="flex justify-center items-center gap-16 opacity-60">
+    <img src="VOGUE-LOGO.svg" alt="Vogue" class="h-6">
+    <img src="GQ-LOGO.svg" alt="GQ" class="h-6">
+    <img src="HARPER-LOGO.svg" alt="Harper's Bazaar" class="h-6">
+    <img src="FORBES-LOGO.svg" alt="Forbes" class="h-6">
+    <img src="ELLE-LOGO.svg" alt="Elle" class="h-6">
+  </div>
+</section>
       /* SECTION 8 — IMAGE HOVER EFFECTS */
 #section-8 .gallery-image {
   opacity: 0.5;
@@ -221,6 +233,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
