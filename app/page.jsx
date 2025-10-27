@@ -274,6 +274,33 @@ export default function Home() {
   </div>
 </section>
 
+      {/* SECTION 13 */}
+<section id="section-13" className="py-32 px-6 bg-black">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-12">
+
+    {/* LEFT — TEXT INTRO (ENDURANCE INTELLIGENCE) */}
+    <div>
+      <p className="text-gray-400 tracking-wide uppercase text-sm mb-4">
+        Regulation Layer
+      </p>
+      <h2 className="text-4xl md:text-5xl font-semibold mb-6 leading-tight">
+        Built for sustained output.
+      </h2>
+      <p className="text-gray-400 text-lg leading-relaxed max-w-lg">
+        Adaptive heat control engineered for long-form performance. Regulates core 
+        temperature through intensity shifts — enabling athletes to operate beyond 
+        the threshold without compromise.
+      </p>
+    </div>
+
+    {/* RIGHT — PRODUCT VISUAL */}
+    <div className="w-full flex justify-center">
+      <img src="/tops.png" alt="Adaptive Performance Top" className="w-full max-w-md max-h-[500px] object-cover" />
+    </div>
+
+  </div>
+</section>
+
       
       {/* ---------------- ANIMATION KEYFRAMES ---------------- */}
       <style jsx>{`
@@ -295,6 +322,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
