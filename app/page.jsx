@@ -122,26 +122,16 @@ export default function Home() {
         </div>
       </section>
 {/* ---------------------- SECTION 6 — MOTION PERFORMANCE ---------------------- */}
-<section className="relative flex flex-col items-center justify-center py-32 bg-titanium overflow-hidden">
-  {/* backdrop gradient for subtle kinetic depth */}
-  <div className="absolute inset-0 bg-gradient-to-b from-black via-titanium to-black opacity-80" />
-
-  {/* motion blur stripe visual */}
-  <div className="absolute inset-0 flex justify-center">
-    <div className="w-[40%] h-full bg-gradient-to-b from-platinum/10 via-platinum/30 to-transparent blur-3xl animate-pulse-slow" />
+<section className="relative flex flex-col items-center justify-center bg-titanium overflow-hidden">
+  <div className="w-full max-w-5xl mx-auto overflow-hidden" style={{ height: '600px' }}>
+    <img 
+      src="/leggings.png"   // ← replace with correct image per section
+      alt="Section visual"
+      className="w-full h-full object-cover"
+    />
   </div>
 
-  {/* product silhouette or video placeholder */}
- 
-<div className="w-full max-w-7xl mx-auto overflow-hidden" style={{ height: '600px' }}>
-  <img
-    src="/leggings.png"
-    alt="Section visual"
-    className="w-full h-full object-cover"
-  />
-</div>
-
-  {/* text overlay */}
+  {/* text overlay stays below */}
   <div className="relative z-20 mt-10 text-center">
     <h2 className="text-4xl md:text-6xl font-bold tracking-tight">Motion Perfected</h2>
     <p className="mt-4 text-neutral-300 max-w-xl">
@@ -151,23 +141,21 @@ export default function Home() {
 </section>
 
       {/* ---------------------- SECTION 7 — ACCESS GATEWAY ---------------------- */}
-<section className="relative w-full bg-titanium py-44 px-12 md:px-24">
-  <div className="max-w-4xl">
-    <h2 className="text-5xl md:text-6xl font-bold tracking-tight leading-tight">
-      ENTER THE<br />
-      PRECISION COLLECTION
-    </h2>
-    <p className="mt-6 text-neutral-400 text-lg md:text-xl max-w-lg">
-      Engineered garments beyond performance.<br />
-      Access begins where endurance becomes evolution.
-    </p>
+<section className="relative flex flex-col items-center justify-center bg-titanium overflow-hidden">
+  <div className="w-full max-w-5xl mx-auto overflow-hidden" style={{ height: '600px' }}>
+    <img 
+      src="/leggings.png"   // ← replace with correct image per section
+      alt="Section visual"
+      className="w-full h-full object-cover"
+    />
+  </div>
 
-    <a
-      href="#shop-motion"
-      className="inline-block mt-12 text-sm tracking-[0.25em] uppercase border border-white/20 bg-white/0 hover:bg-white/5 transition-all duration-500 px-10 py-4 rounded-full"
-    >
-      PROCEED
-    </a>
+  {/* text overlay stays below */}
+  <div className="relative z-20 mt-10 text-center">
+    <h2 className="text-4xl md:text-6xl font-bold tracking-tight">Motion Perfected</h2>
+    <p className="mt-4 text-neutral-300 max-w-xl">
+      Engineered for continuous flow. Every fiber aligned for balance, strength, and forward drive.
+    </p>
   </div>
 </section>
 
@@ -325,6 +313,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
