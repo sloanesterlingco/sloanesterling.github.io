@@ -167,7 +167,7 @@ export default function Home() {
   </div>
 </section>
 
-<!-- SECTION 8 -->
+      {/* SECTION 8 */}
 <section id="section-8" class="py-24 px-6 bg-black">
   <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
     
@@ -185,7 +185,8 @@ export default function Home() {
 
   </div>
 </section>
-<!-- SECTION 9 -->
+
+      {/* SECTION 9 */}
 <section id="section-9" class="py-20 bg-black text-center">
   <p class="text-gray-300 tracking-wide uppercase text-sm mb-12">
     Recognized by the world’s most influential fashion voices.
@@ -233,6 +234,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
