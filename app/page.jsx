@@ -73,7 +73,7 @@ export default function Home() {
       {/* ---------------- SECTION 4 — HYPERCLEAN REVEAL ---------------- */}
       <section
         id="leggings"
-        className="relative flex flex-col items-center justify-center min-h-screen bg-titanium"
+        className="relative flex flex-col items-center justify-center bg-titanium py-32"
       >
         {/* atmospheric aura */}
         <div className="absolute inset-0 bg-gradient-to-b from-white/5 via-transparent to-transparent" />
@@ -313,6 +313,7 @@ export default function Home() {
     </main>
   );
 }
+
 
 
 
