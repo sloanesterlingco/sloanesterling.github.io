@@ -1,4 +1,5 @@
 import "./../styles/globals.css";
+
 export const metadata = {
   title: "LUXESCULPT™",
   icons: {
@@ -7,6 +8,7 @@ export const metadata = {
     apple: "/apple-touch-icon.png",
   },
 };
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="dark">
