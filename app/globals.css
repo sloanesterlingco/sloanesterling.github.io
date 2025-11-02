@@ -2,22 +2,108 @@
 @tailwind components;
 @tailwind utilities;
 
+/* BASE */
 html, body {
-  @apply bg-titanium text-white antialiased;
-  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background: #000;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+* { box-sizing: border-box; }
+
+/* BRAND GOLD */
+.text-luxegold { color: #d4af37; }
+.bg-luxegold { background-color: #d4af37; }
+
+/* GLASS NAVBAR */
+.luxeglass {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.05);
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+  transition: all 0.4s ease;
 }
 
-/* SECTION 8 — IMAGE HOVER EFFECTS */
-#section-8 .gallery-image {
-  opacity: 0.5;
-  transform: scale(1);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  width: 100%;
-  height: auto;
-  display: block;
+/* LUXESCULPT GLOW */
+.luxeglow {
+  text-shadow:
+    0 0 8px rgba(212,175,55,0.6),
+    0 0 16px rgba(212,175,55,0.4);
+  transition: all 0.3s ease;
+}
+.luxeglow:hover {
+  text-shadow:
+    0 0 12px rgba(212,175,55,0.9),
+    0 0 24px rgba(212,175,55,0.6);
 }
 
-#section-8 .gallery-image:hover {
+/* BRAND LOGO HOVER */
+.brand-logo {
+  opacity: 0.75;
+  transition: all 0.3s ease;
+}
+.brand-logo:hover {
   opacity: 1;
-  transform: scale(1.03);
+  filter: brightness(1.4) sepia(1) hue-rotate(25deg) saturate(1.6);
+  transform: translateY(-2px);
+}
+
+/* PULSE ANIMATION */
+.animate-pulse-slow {
+  animation: pulseSlow 3s infinite;
+}
+@keyframes pulseSlow {
+  0%,100% { opacity:0.7; }
+  50% { opacity:1; }
+}
+
+/* VIDEO */
+video {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* RESPONSIVE */
+@media (max-width:768px){
+  h1{font-size:2rem;}
+  h2{font-size:1.5rem;}
+  .luxeglass{backdrop-filter:blur(10px);background:rgba(255,255,255,0.06);}
+}
+/* =============================== */
+/* ✨ LUXESCULPT™ NAVBAR GLOW FIX */
+/* =============================== */
+
+/* Lighten glass slightly so glow is visible through it */
+.luxeglass {
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.025); /* more transparent */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  transition: all 0.4s ease;
+}
+
+/* Make the glow vivid and consistent across browsers */
+.luxeglow {
+  color: #fff;
+  text-shadow:
+    0 0 8px rgba(255, 215, 0, 0.9),
+    0 0 18px rgba(255, 215, 0, 0.7),
+    0 0 36px rgba(255, 215, 0, 0.6),
+    0 0 60px rgba(255, 215, 0, 0.4);
+  filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.6));
+  transition: text-shadow 0.3s ease, filter 0.3s ease;
+}
+
+.luxeglow:hover {
+  text-shadow:
+    0 0 12px rgba(255, 230, 100, 1),
+    0 0 24px rgba(255, 215, 0, 0.9),
+    0 0 50px rgba(255, 215, 0, 0.7);
+  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.7));
 }
