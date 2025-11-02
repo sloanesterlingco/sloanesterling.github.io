@@ -1,3 +1,15 @@
+"use client";
+
+import "./globals.css";
+import Link from "next/link";
+import Image from "next/image";
+import { useState } from "react";
+import { CartProvider } from "./context/CartContext";
+import CartIcon from "./components/CartIcon";
+import { productSchema } from "./run/schema.jsonld";
+import { brandSchema } from "./brand/schema.jsonld";
+import { graphSchema } from "./graph/schema.jsonld";
+
 export const metadata = {
   title: "LuxeSculpt™ Performance — Precision Compressionwear for Elite Movement",
   description:
@@ -29,18 +41,6 @@ export const metadata = {
     ],
   },
 };
-
-"use client";
-
-import "./globals.css";
-import Link from "next/link";
-import Image from "next/image";
-import { useState } from "react";
-import { CartProvider } from "./context/CartContext";
-import CartIcon from "./components/CartIcon";
-import { productSchema } from "./run/schema.jsonld";
-import { brandSchema } from "./brand/schema.jsonld";
-import { graphSchema } from "./graph/schema.jsonld";
 
 export default function RootLayout({ children }) {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -153,15 +153,31 @@ export default function RootLayout({ children }) {
               © {new Date().getFullYear()} LuxeSculpt™ Performance — Engineered by Sloane Sterling. All Rights Reserved.
             </p>
             <div className="flex justify-center gap-6 mt-4">
-              <a href="https://www.instagram.com/sloanesterlingc/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
+              <a
+                href="https://www.instagram.com/sloanesterlingc/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition"
+              >
                 Instagram
               </a>
-              <a href="https://www.tiktok.com/@sloanesterling" target="_blank" rel="noopener noreferrer" className="hover:text-white transition">
+              <a
+                href="https://www.tiktok.com/@sloanesterling"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-white transition"
+              >
                 TikTok
               </a>
-              <a href="#" className="hover:text-white transition">Privacy</a>
-              <a href="#" className="hover:text-white transition">Terms</a>
-              <a href="#" className="hover:text-white transition">Contact</a>
+              <a href="#" className="hover:text-white transition">
+                Privacy
+              </a>
+              <a href="#" className="hover:text-white transition">
+                Terms
+              </a>
+              <a href="#" className="hover:text-white transition">
+                Contact
+              </a>
             </div>
           </footer>
         </CartProvider>
@@ -169,3 +185,4 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
+
