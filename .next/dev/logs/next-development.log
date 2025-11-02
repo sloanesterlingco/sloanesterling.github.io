@@ -1,11 +1,1 @@
-[00:00:00.991] Server  LOG      ✓ Ready in 681ms
-[00:00:09.638] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
-[00:00:26.254] Browser WARN    Image with src "http://localhost:3000/Logos/vogue.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:00:26.254] Browser WARN    Image with src "http://localhost:3000/Logos/elle.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:00:26.254] Browser WARN    Image with src "http://localhost:3000/Logos/harpersbazaar.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:00:26.254] Browser WARN    Image with src "http://localhost:3000/Logos/gq.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:00:26.254] Browser WARN    Image with src "http://localhost:3000/Logos/forbes.svg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
-[00:01:14.124] Server  LOG      ✓ Compiled in 26ms
-[00:03:33.332] Server  LOG      ✓ Compiled in 78ms
-[00:03:39.345] Server  LOG      ✓ Compiled in 93ms
-[00:08:31.865] Server  LOG      ✓ Compiled in 71ms
+[00:00:00.923] Server  LOG      ✓ Ready in 584ms
