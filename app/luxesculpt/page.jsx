@@ -127,14 +127,13 @@ const LuxeSculptPage = () => {
 
       {/* 🏆 ENDORSEMENTS */}
       <section className="bg-black py-20">
-        <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-12">
-          <Image src="/Logos/vogue.svg" alt="Vogue" width={120} height={60} className="brand-logo" />
-          <Image src="/Logos/harpersbazaar.svg" alt="Harper's Bazaar" width={140} height={60} className="brand-logo" />
-          <Image src="/Logos/elle.svg" alt="ELLE" width={100} height={60} className="brand-logo" />
-          <Image src="/Logos/gq.svg" alt="GQ" width={100} height={60} className="brand-logo" />
-          <Image src="/Logos/forbes.svg" alt="Forbes" width={120} height={60} className="brand-logo" />
-        </div>
-      </section>
+  <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-12 opacity-70">
+    <Image src="/images/vogue.svg" alt="Vogue" width={120} height={60} />
+    <Image src="/images/nike.svg" alt="Nike" width={120} height={60} />
+    <Image src="/images/womenshealth.svg" alt="Women's Health" width={160} height={60} />
+    <Image src="/images/shape.svg" alt="Shape" width={120} height={60} />
+  </div>
+</section>
     </main>
   );
 };
