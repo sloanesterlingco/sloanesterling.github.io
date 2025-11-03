@@ -107,3 +107,23 @@ video {
     0 0 50px rgba(255, 215, 0, 0.7);
   filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.7));
 }
+@keyframes shimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes glow {
+  0% { opacity: 0.3; }
+  50% { opacity: 0.5; }
+  100% { opacity: 0.3; }
+}
+
+.animate-shimmer {
+  background-size: 400% 400%;
+  animation: shimmer 10s ease-in-out infinite;
+}
+
+.animate-glow {
+  animation: glow 8s ease-in-out infinite;
+}
