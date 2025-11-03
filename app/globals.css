@@ -2,143 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-/* BASE */
-html, body {
-  margin: 0;
-  padding: 0;
+/* 🌍 Base Body Styles */
+body {
+  @apply bg-black text-white antialiased;
   font-family: 'Inter', sans-serif;
-  background: #000;
-  color: #fff;
-  scroll-behavior: smooth;
-}
-* { box-sizing: border-box; }
-
-/* BRAND GOLD */
-.text-luxegold { color: #d4af37; }
-.bg-luxegold { background-color: #d4af37; }
-
-/* GLASS NAVBAR */
-.luxeglass {
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  background: rgba(255,255,255,0.05);
-  border-bottom: 1px solid rgba(255,255,255,0.25);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
-  transition: all 0.4s ease;
+  overflow-x: hidden;
 }
 
-/* LUXESCULPT GLOW */
-.luxeglow {
-  text-shadow:
-    0 0 8px rgba(212,175,55,0.6),
-    0 0 16px rgba(212,175,55,0.4);
-  transition: all 0.3s ease;
-}
-.luxeglow:hover {
-  text-shadow:
-    0 0 12px rgba(212,175,55,0.9),
-    0 0 24px rgba(212,175,55,0.6);
+/* 🧭 Headings */
+h1, h2, h3, h4 {
+  @apply font-bold tracking-tight;
 }
 
-/* BRAND LOGO HOVER */
-.brand-logo {
-  opacity: 0.75;
-  transition: all 0.3s ease;
-}
-.brand-logo:hover {
-  opacity: 1;
-  filter: brightness(1.4) sepia(1) hue-rotate(25deg) saturate(1.6);
-  transform: translateY(-2px);
+/* 🪩 Buttons */
+button {
+  @apply transition-all duration-300 ease-in-out;
 }
 
-/* PULSE ANIMATION */
-.animate-pulse-slow {
-  animation: pulseSlow 3s infinite;
-}
-@keyframes pulseSlow {
-  0%,100% { opacity:0.7; }
-  50% { opacity:1; }
-}
-
-/* VIDEO */
+/* 🎥 Hero Video Styling (if you want smoother fade-in) */
 video {
-  display: block;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+  @apply transition-opacity duration-700 ease-in-out;
 }
 
-/* RESPONSIVE */
-@media (max-width:768px){
-  h1{font-size:2rem;}
-  h2{font-size:1.5rem;}
-  .luxeglass{backdrop-filter:blur(10px);background:rgba(255,255,255,0.06);}
+/* 🌀 Scrollbar (optional — luxury touch) */
+::-webkit-scrollbar {
+  width: 8px;
 }
-/* =============================== */
-/* ✨ LUXESCULPT™ NAVBAR GLOW FIX */
-/* =============================== */
-
-/* Lighten glass slightly so glow is visible through it */
-.luxeglass {
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  background: rgba(255, 255, 255, 0.025); /* more transparent */
-  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-  transition: all 0.4s ease;
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #F5C84C, #8B6E00);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #111;
 }
 
-/* Make the glow vivid and consistent across browsers */
-.luxeglow {
-  color: #fff;
-  text-shadow:
-    0 0 8px rgba(255, 215, 0, 0.9),
-    0 0 18px rgba(255, 215, 0, 0.7),
-    0 0 36px rgba(255, 215, 0, 0.6),
-    0 0 60px rgba(255, 215, 0, 0.4);
-  filter: drop-shadow(0 0 3px rgba(255, 215, 0, 0.6));
-  transition: text-shadow 0.3s ease, filter 0.3s ease;
-}
-
-.luxeglow:hover {
-  text-shadow:
-    0 0 12px rgba(255, 230, 100, 1),
-    0 0 24px rgba(255, 215, 0, 0.9),
-    0 0 50px rgba(255, 215, 0, 0.7);
-  filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.7));
-}
-@keyframes shimmer {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
+/* 💫 Glow Animation */
 @keyframes glow {
-  0% { opacity: 0.3; }
-  50% { opacity: 0.5; }
-  100% { opacity: 0.3; }
-}
-
-.animate-shimmer {
-  background-size: 400% 400%;
-  animation: shimmer 10s ease-in-out infinite;
-}
-
-.animate-glow {
-  animation: glow 8s ease-in-out infinite;
-}
-@keyframes shimmer {
-  0% {
-    transform: translateX(-100%);
+  0%, 100% {
+    text-shadow: 0 0 10px rgba(245, 200, 76, 0.4),
+                 0 0 20px rgba(245, 200, 76, 0.3),
+                 0 0 30px rgba(245, 200, 76, 0.2);
   }
   50% {
-    transform: translateX(100%);
+    text-shadow: 0 0 20px rgba(245, 200, 76, 0.8),
+                 0 0 40px rgba(245, 200, 76, 0.6),
+                 0 0 60px rgba(245, 200, 76, 0.4);
   }
-  100% {
-    transform: translateX(200%);
-  }
-}
-
-.animate-shimmer {
-  animation: shimmer 3s infinite linear;
 }

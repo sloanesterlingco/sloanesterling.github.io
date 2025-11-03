@@ -1,8 +1,11 @@
-import { redirect } from "next/navigation";
-
-export default function Home() {
-  redirect("/luxesculpt");
+export default function LuxeSculptPage() {
+  return (
+    <main>
+      <h1>LuxeSculpt Page</h1>
+    </main>
+  );
 }
+
 
 
 

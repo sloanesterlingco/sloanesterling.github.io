@@ -1,38 +1,16 @@
 "use client";
+import { createContext, useContext, useState } from "react";
 
-import { createContext, useContext, useState, useEffect } from "react";
-
+// Create the context
 const CartContext = createContext();
 
+// Provider component
 export function CartProvider({ children }) {
   const [cart, setCart] = useState([]);
 
-  // Load saved cart
-  useEffect(() => {
-    const stored = localStorage.getItem("luxesculpt-cart");
-    if (stored) setCart(JSON.parse(stored));
-  }, []);
-
-  // Save cart on every change
-  useEffect(() => {
-    localStorage.setItem("luxesculpt-cart", JSON.stringify(cart));
-  }, [cart]);
-
-  const addToCart = (product) => {
-    setCart((prev) => {
-      const existing = prev.find((i) => i.id === product.id);
-      if (existing) {
-        return prev.map((i) =>
-          i.id === product.id ? { ...i, quantity: i.quantity + 1 } : i
-        );
-      }
-      return [...prev, { ...product, quantity: 1 }];
-    });
-  };
-
+  const addToCart = (item) => setCart((prev) => [...prev, item]);
   const removeFromCart = (id) =>
-    setCart((prev) => prev.filter((i) => i.id !== id));
-
+    setCart((prev) => prev.filter((item) => item.id !== id));
   const clearCart = () => setCart([]);
 
   return (
@@ -42,6 +20,7 @@ export function CartProvider({ children }) {
   );
 }
 
+// Hook for using cart data
 export function useCart() {
   return useContext(CartContext);
 }

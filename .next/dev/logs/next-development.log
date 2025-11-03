@@ -1,1 +1,5 @@
-[00:00:00.898] Server  LOG      ✓ Ready in 628ms
+[00:00:00.734] Server  LOG      ✓ Ready in 481ms
+[00:00:02.824] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:02.824] Browser LOG     TSS: Received response from checkDomainAndRun: {"isAllowListed":false,"isProtectionEnabled":true,"isScamsProtectionEnabled":true}
+[00:00:02.824] Browser DEBUG   injection-tss TSS: hosted page injected
+[00:00:02.824] Browser DEBUG   injection-tss MBTSS: Nonce:  nonce

@@ -1,29 +1,25 @@
-// app/layout.jsx
 import "./globals.css";
-import NavBar from "./components/NavBar";
-import { CartProvider } from "./context/CartContext";
-import { productSchema } from "./run/schema.jsonld";
-import { brandSchema } from "./brand/schema.jsonld";
+import { Inter } from "next/font/google";
+import { CartProvider } from "@/context/CartContext";
+const inter = Inter({ subsets: ["latin"] });
 
-// ===============================
-// 🌐 METADATA (SEO + SOCIAL)
-// ===============================
 export const metadata = {
-  title: "LuxeSculpt™ | Engineered for Intensity",
+  title: "LUXESCULPT™ | Precision Engineered Activewear",
   description:
-    "Elite compression architecture meets sculpted design. LuxeSculpt™ Proto-01 — performance engineered for beauty, built for power.",
+    "Sculpted precision for form, flow, and power — engineered to enhance movement and recovery. Limited to 300 Elite Builds.",
+  metadataBase: new URL("https://sloanesterling.com"), // ✅ update this to your production domain
   openGraph: {
-    title: "LuxeSculpt™ | Engineered for Intensity",
+    title: "LUXESCULPT™ | Precision Engineered Activewear",
     description:
-      "High-performance muscle-mapping compression designed for elite movement and aesthetics.",
-    url: "https://luxesculptperformance.com",
-    siteName: "LuxeSculpt™",
+      "Elite compression architecture designed by Sloane Sterling — performance without compromise.",
+    url: "https://sloanesterling.com/luxesculpt",
+    siteName: "LUXESCULPT™",
     images: [
       {
-        url: "/og/luxesculpt-og.png",
+        url: "/videos/luxesculpt-hero-thumbnail.jpg", // static OG preview image (place this in /public)
         width: 1200,
         height: 630,
-        alt: "LuxeSculpt™ | Engineered for Intensity",
+        alt: "LUXESCULPT™ Hero Image",
       },
     ],
     locale: "en_US",
@@ -31,37 +27,21 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "LuxeSculpt™ | Engineered for Intensity",
+    title: "LUXESCULPT™ | Precision Engineered Activewear",
     description:
-      "Adaptive compression architecture for elite performance and sculpted design.",
-    images: ["/og/luxesculpt-og.png"],
+      "Elite compression architecture designed by Sloane Sterling — performance without compromise.",
+    images: ["/videos/luxesculpt-hero-thumbnail.jpg"],
   },
 };
 
-// ===============================
-// ⚙️ ROOT LAYOUT
-// ===============================
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(brandSchema) }}
-        />
-      </head>
-      <body className="bg-black text-white antialiased">
+      <body className={`${inter.className} bg-black text-white antialiased`}>
+        {/* 🛒 Cart Provider wraps the entire app */}
         <CartProvider>
-          <NavBar />
           {children}
         </CartProvider>
-        <footer className="py-10 text-center text-gray-500 text-sm tracking-wide">
-          © {new Date().getFullYear()} LuxeSculpt™ — Designed by Sloane Sterling
-        </footer>
       </body>
     </html>
   );

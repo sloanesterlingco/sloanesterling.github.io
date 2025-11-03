@@ -1,28 +1,40 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import type { Config } from "tailwindcss";
+
+const config: Config = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-    "./styles/**/*.{css,scss}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     extend: {
+      colors: {
+        luxegold: "#F5C84C",
+        luxeblack: "#000000",
+        luxesilver: "#C0C0C0",
+      },
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
+      },
       keyframes: {
-        shimmer: {
-          "0%": { backgroundPosition: "0% 50%" },
-          "50%": { backgroundPosition: "100% 50%" },
-          "100%": { backgroundPosition: "0% 50%" },
-        },
         glow: {
-          "0%, 100%": { opacity: "0.3" },
-          "50%": { opacity: "0.6" },
+          "0%, 100%": {
+            textShadow:
+              "0 0 10px rgba(245,200,76,0.4), 0 0 20px rgba(245,200,76,0.3), 0 0 30px rgba(245,200,76,0.2)",
+          },
+          "50%": {
+            textShadow:
+              "0 0 20px rgba(245,200,76,0.8), 0 0 40px rgba(245,200,76,0.6), 0 0 60px rgba(245,200,76,0.4)",
+          },
         },
       },
       animation: {
-        shimmer: "shimmer 10s ease-in-out infinite",
-        glow: "glow 8s ease-in-out infinite",
+        glow: "glow 3s ease-in-out infinite",
       },
     },
   },
   plugins: [],
 };
+
+export default config;
