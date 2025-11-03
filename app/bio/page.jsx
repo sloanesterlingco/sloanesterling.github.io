@@ -38,14 +38,15 @@ export default function BioPage() {
 
       {/* 📸 Follow Button */}
       <div>
-        <a
-          href="https://instagram.com/sloanesterlingc"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="relative border border-[#d4af37] text-[#d4af37] font-semibold py-4 px-8 rounded-full hover:bg-[#d4af37] hover:text-black transition-all duration-300 shadow-md hover:shadow-lg hover:scale-[1.03]"
-        >
-          📸 Follow Sloane Sterling
-        </a>
+       <a
+  href="https://www.instagram.com/sloanesterlingc"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="relative border border-[#d4af37] text-[#d4af37] font-semibold py-4 px-8 rounded-full hover:bg-[#d4af37] hover:text-black transition-all duration-300 shadow-md hover:shadow-lg hover:scale-[1.03]"
+>
+  📸 Follow Sloane Sterling
+</a>
+
       </div>
 
       {/* 🌐 Website Button */}
