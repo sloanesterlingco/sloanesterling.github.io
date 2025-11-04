@@ -1,169 +1,218 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* 🌍 GLOBAL STYLING FOR LUXESCULPT™ PERFORMANCE HOUSE */
 
-/* -------------------------------------------
-   🖤 LUXESCULPT™ GLOBAL BRAND BASE
--------------------------------------------- */
+/* ——— RESET & BASE ——— */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html,
 body {
   background-color: #000;
   color: #fff;
-  font-family: 'Inter', 'Poppins', sans-serif;
+  font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
+  overscroll-behavior: none;
 }
 
-/* Subtle scrollbar glow */
-::-webkit-scrollbar {
-  width: 8px;
-}
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #f5c84c, #b8902a);
-  border-radius: 10px;
-}
-::-webkit-scrollbar-track {
-  background: #111;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-/* -------------------------------------------
-   ✨ ANIMATIONS
--------------------------------------------- */
-
-/* Slide Down (open dropdown or menu) */
-@keyframes slideDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  60% {
-    opacity: 0.9;
-    transform: translateY(4px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: 0.05em;
 }
 
-/* Slide Up (close dropdown or menu) */
-@keyframes slideUp {
-  0% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  40% {
-    opacity: 0.7;
-    transform: translateY(-4px);
-  }
-  100% {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
+p {
+  line-height: 1.6;
+  opacity: 0.85;
 }
 
-.animate-slideDown {
-  animation: slideDown 0.4s ease-out forwards;
+/* ——— ANIMATIONS ——— */
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.2s ease-out forwards;
 }
 
-.animate-slideUp {
-  animation: slideUp 0.35s ease-in forwards;
+@keyframes slide-down {
+  0% { opacity: 0; transform: translateY(-10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-slide-down {
+  animation: slide-down 0.4s ease-out forwards;
 }
 
-/* -------------------------------------------
-   ⚡ MICRO SPARK TRACER (gold shimmer)
--------------------------------------------- */
-@keyframes sparkTracer {
-  0% {
-    opacity: 0;
-    transform: scale(0.6) translateX(-30%) translateY(-30%);
-    box-shadow: 0 0 5px rgba(245, 200, 76, 0.1);
+@keyframes mobile-slide-down {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-mobile-slide-down {
+  animation: mobile-slide-down 0.5s ease-out forwards;
+}
+
+@keyframes slide-up-fade {
+  0% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-20px); }
+}
+.animate-slide-up-fade {
+  animation: slide-up-fade 0.5s ease-in forwards;
+}
+
+/* ——— GOLD EFFECTS ——— */
+@keyframes pulse-gold {
+  0%, 100% {
+    filter: drop-shadow(0 0 6px rgba(245,200,76,0.7));
   }
   50% {
-    opacity: 1;
-    transform: scale(1.05) translateX(20%) translateY(20%);
-    box-shadow: 0 0 10px rgba(245, 200, 76, 0.5);
-  }
-  100% {
-    opacity: 0;
-    transform: scale(0.7) translateX(50%) translateY(50%);
-    box-shadow: 0 0 2px rgba(245, 200, 76, 0);
+    filter: drop-shadow(0 0 16px rgba(245,200,76,0.9));
   }
 }
+.animate-pulse-gold {
+  animation: pulse-gold 3s infinite ease-in-out;
+}
 
-.animate-sparkTracer {
+@keyframes bio-glow {
+  0%, 100% {
+    box-shadow: 0 0 12px rgba(245,200,76,0.8);
+  }
+  50% {
+    box-shadow: 0 0 22px rgba(245,200,76,1);
+  }
+}
+.animate-bio-glow {
+  animation: bio-glow 2s infinite ease-in-out;
+}
+
+@keyframes tracer-light {
+  0% { opacity: 0; transform: translateX(-100%); }
+  50% { opacity: 1; }
+  100% { opacity: 0; transform: translateX(100%); }
+}
+.tracer-light {
   position: absolute;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #f5c84c 0%, #b8902a 100%);
-  animation: sparkTracer 2.2s ease-in-out infinite;
-  pointer-events: none;
+  top: 0; left: 0;
+  height: 1px; width: 100%;
+  background: linear-gradient(to right, transparent, rgba(245,200,76,0.8), transparent);
+  animation: tracer-light 3.5s infinite linear;
 }
 
-/* -------------------------------------------
-   🌫️ GLASSY DROPDOWN EFFECT
--------------------------------------------- */
-.backdrop-blur-md {
-  backdrop-filter: blur(12px);
-}
-
-.bg-glass-gold {
-  background: rgba(0, 0, 0, 0.75);
-  border: 1px solid rgba(245, 200, 76, 0.4);
-  box-shadow: 0 0 25px rgba(245, 200, 76, 0.3);
-}
-
-/* -------------------------------------------
-   🟡 BUTTON HOVER GLOW
--------------------------------------------- */
-button,
-a {
+/* ——— GLASS PANEL ——— */
+.glass-panel {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(245,200,76,0.25);
+  box-shadow: 0 0 25px rgba(245,200,76,0.2);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
   transition: all 0.3s ease;
 }
-
-a:hover,
-button:hover {
-  filter: drop-shadow(0 0 10px rgba(245, 200, 76, 0.6));
+.glass-panel:hover {
+  box-shadow: 0 0 35px rgba(245,200,76,0.35);
+  border-color: rgba(245,200,76,0.4);
 }
 
-/* -------------------------------------------
-   📱 SMOOTH RESPONSIVE FIXES
--------------------------------------------- */
+/* ——— AMBIENT BACKGROUND ——— */
+@keyframes ambient-glow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.bg-ambient {
+  background: linear-gradient(135deg,
+    rgba(245,200,76,0.15),
+    rgba(0,0,0,0.85),
+    rgba(245,200,76,0.1)
+  );
+  background-size: 200% 200%;
+  animation: ambient-glow 10s ease-in-out infinite;
+}
+
+/* ——— BUTTONS & EFFECTS ——— */
+button, .btn {
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+button:hover, .btn:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 10px rgba(245,200,76,0.6));
+}
+
+/* Ripple feedback */
+button::after {
+  content: "";
+  position: absolute;
+  background: rgba(245,200,76,0.4);
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 0;
+  pointer-events: none;
+}
+button:active::after {
+  animation: ripple 0.6s linear;
+}
+@keyframes ripple {
+  0% { transform: scale(0); opacity: 1; }
+  100% { transform: scale(4); opacity: 0; }
+}
+
+/* ——— PAGE TRANSITIONS ——— */
+.page-transition {
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+.page-transition.active {
+  opacity: 1;
+}
+
+/* ——— SECTION DIVIDERS ——— */
+.section-divider {
+  width: 80%;
+  height: 1px;
+  margin: 3rem auto;
+  background: linear-gradient(to right, transparent, rgba(245,200,76,0.6), transparent);
+  opacity: 0.5;
+}
+
+/* ——— CARD HOVER ——— */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(245,200,76,0.2);
+}
+
+/* ——— SCROLLBAR ——— */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg,
+    rgba(245,200,76,0.7),
+    rgba(245,200,76,0.3)
+  );
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(245,200,76,0.9);
+}
+
+/* ——— MEDIA RESPONSIVE ——— */
+@media (max-width: 1024px) {
+  .fade-in { animation-duration: 1s; }
+}
 @media (max-width: 768px) {
-  nav {
-    backdrop-filter: blur(20px);
-    background: rgba(0, 0, 0, 0.85);
-  }
-}
-@keyframes glowGold {
-  0%, 100% {
-    opacity: 0.5;
-    box-shadow: 0 0 10px rgba(245, 200, 76, 0.6), 0 0 20px rgba(245, 200, 76, 0.4);
-  }
-  50% {
-    opacity: 0.9;
-    box-shadow: 0 0 20px rgba(245, 200, 76, 0.9), 0 0 40px rgba(245, 200, 76, 0.7);
-  }
+  nav { backdrop-filter: blur(20px); }
+  .glass-panel { border-radius: 8px; }
 }
 
-.animate-glowGold {
-  animation: glowGold 3s ease-in-out infinite;
-}
-
-.animate-pulseGold {
-  animation: glowGold 3s ease-in-out infinite;
-}
-@keyframes bioPulse {
-  0%, 100% {
-    box-shadow: 0 0 8px rgba(245, 200, 76, 0.6),
-                0 0 16px rgba(245, 200, 76, 0.3);
-  }
-  50% {
-    box-shadow: 0 0 14px rgba(245, 200, 76, 0.9),
-                0 0 26px rgba(245, 200, 76, 0.5);
-  }
-}
-
-.animate-bioPulse {
-  animation: bioPulse 2.8s ease-in-out infinite;
+/* ——— AUDIO CLICK SUPPORT (optional future) ——— */
+.audio-click {
+  outline: none;
+  user-select: none;
 }
