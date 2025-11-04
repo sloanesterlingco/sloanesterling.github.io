@@ -1,0 +1,14 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/all/page": "/all",
+  "/bio/page": "/bio",
+  "/cart/page": "/cart",
+  "/cycle/page": "/cycle",
+  "/flow/page": "/flow",
+  "/goat/page": "/goat",
+  "/luxesculpt/page": "/luxesculpt",
+  "/page": "/",
+  "/run/page": "/run",
+  "/swag/page": "/swag"
+}

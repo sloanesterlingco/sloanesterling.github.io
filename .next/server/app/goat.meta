@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/goat/layout,_N_T_/goat/page,_N_T_/goat"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/goat/__PAGE__",
+    "/goat",
+    "/_index"
+  ]
+}
