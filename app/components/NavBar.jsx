@@ -19,12 +19,8 @@ export default function NavBar() {
   return (
     <nav className="w-full fixed top-0 left-0 z-50 bg-gradient-to-b from-black via-neutral-900/95 to-black/80 backdrop-blur-xl border-b border-neutral-800 shadow-[0_0_25px_rgba(0,0,0,0.7)]">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-
-        {/* 🌟 LOGO — Now clickable to /luxesculpt */}
-        <Link
-          href="/luxesculpt"
-          className="flex items-center gap-3 hover:opacity-90 transition-all duration-300"
-        >
+        {/* 🌟 LOGO WITH LINK */}
+        <Link href="/luxesculpt" className="flex items-center gap-3 hover:opacity-90 transition-all">
           <Image
             src="/brand/LUXESCULPT-ICON.PNG"
             alt="LuxeSculpt Logo"
@@ -36,7 +32,7 @@ export default function NavBar() {
             <span className="font-bold text-[#F5C84C] tracking-wide drop-shadow-[0_0_10px_rgba(245,200,76,0.9)]">
               LUXESCULPT™
             </span>
-            <p className="text-xs text-gray-400 uppercase tracking-widest">
+            <p className="text-xs text-[#F5C84C] uppercase tracking-widest font-medium">
               Limited Production
             </p>
           </div>
@@ -71,7 +67,6 @@ export default function NavBar() {
                 {item.name}
               </Link>
 
-              {/* 💬 DROPDOWN */}
               {item.name !== "BIO" && (
                 <div
                   className={`absolute top-12 left-1/2 transform -translate-x-1/2 bg-black/95 text-white text-sm font-medium tracking-wide px-8 py-3 min-w-[160px] text-center rounded-lg shadow-[0_0_25px_rgba(245,200,76,0.6)] backdrop-blur-md border border-[#F5C84C]/40 transition-all duration-300 ${
