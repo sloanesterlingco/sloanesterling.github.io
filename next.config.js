@@ -1,9 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  output: 'standalone',
+  output: "standalone",
   images: {
-    domains: ['luxesculptperformance.com'],
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "luxesculptperformance.com",
+        pathname: "/**",
+      },
+    ],
   },
 };
 
