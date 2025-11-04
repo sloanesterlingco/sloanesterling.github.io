@@ -1,30 +1,17 @@
-export const metadata = {
-  title: "LuxeSculpt™ | The Future of Compressionwear",
-  description:
-    "No shortcuts. No softness. LuxeSculpt™ Performance pushes your limits with biomechanical compression that moves as hard as you do. Designed by Sloane Sterling.",
-  openGraph: {
-    title: "LuxeSculpt™ | The Future of Compressionwear",
-    description:
-      "No shortcuts. No softness. LuxeSculpt™ Performance pushes your limits with biomechanical compression that moves as hard as you do. Designed by Sloane Sterling.",
-    url: "https://luxesculptperformance.com/bio",
-    siteName: "LuxeSculpt™ Performance",
-    images: [
-      {
-        url: "https://luxesculptperformance.com/images/og-preview.png",
-        width: 1200,
-        height: 630,
-        alt: "Sloane Sterling — LuxeSculpt™ Performance",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "LuxeSculpt™ | The Future of Compressionwear",
-    description:
-      "No shortcuts. No softness. LuxeSculpt™ Performance pushes your limits with biomechanical compression that moves as hard as you do. Designed by Sloane Sterling.",
-    images: ["https://luxesculptperformance.com/images/og-preview.png"],
-  },
-};
+export default function Head() {
+  return (
+    <>
+      <title>LUXESCULPT™ | Precision Engineered Activewear</title>
+      <meta
+        name="description"
+        content="Sculpted precision for form, flow, and performance. Adaptive compression architecture engineered by Sloane Sterling."
+      />
+      <link rel="icon" href="/brand/favicon-32x32.png" type="image/png" />
+      <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png" />
+      <link rel="shortcut icon" href="/brand/bio-icon.png" type="image/png" />
+      <meta property="og:image" content="/brand/bio-icon.png" />
+      <meta name="theme-color" content="#F5C84C" />
+    </>
+  );
+}
 
