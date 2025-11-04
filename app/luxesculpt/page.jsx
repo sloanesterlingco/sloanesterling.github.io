@@ -1,18 +1,20 @@
 "use client";
 
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
-import HeroSection from "./HeroSection";
-import FabricSection from "./FabricSection";
-import MuscleMapping from "./MuscleMapping";
-import RearView from "./RearView";
-import Endorsements from "./Endorsements";
+import dynamic from "next/dynamic";
+import React from "react";
 
-
+// 🧠 Dynamic safe imports — page won't go blank if one fails
+const NavBar = dynamic(() => import("../components/NavBar").catch(() => () => <div className="text-red-500 text-center p-6">⚠️ NavBar failed to load</div>), { ssr: false });
+const HeroSection = dynamic(() => import("./HeroSection").catch(() => () => <div className="text-red-500 text-center p-6">⚠️ HeroSection failed</div>), { ssr: false });
+const FabricSection = dynamic(() => import("./FabricSection").catch(() => () => <div className="text-red-500 text-center p-6">⚠️ FabricSection failed</div>), { ssr: false });
+const MuscleMapping = dynamic(() => import("./MuscleMapping").catch(() => () => <div className="text-red-500 text-center p-6">⚠️ MuscleMapping failed</div>), { ssr: false });
+const RearView = dynamic(() => import("./RearView").catch(() => () => <div className="text-red-500 text-center p-6">⚠️ RearView failed</div>), { ssr: false });
+const Endorsements = dynamic(() => import("./Endorsements").catch(() => () => <div className="text-red-500 text-center p-6">⚠️ Endorsements failed</div>), { ssr: false });
+const Footer = dynamic(() => import("../components/Footer").catch(() => () => <div className="text-red-500 text-center p-6">⚠️ Footer failed</div>), { ssr: false });
 
 export default function LuxeSculptPage() {
   return (
-    <main className="w-full overflow-hidden bg-black text-white">
+    <main className="w-full overflow-hidden bg-black text-white min-h-screen">
       {/* 🏁 NAVIGATION */}
       <NavBar />
 
@@ -25,7 +27,7 @@ export default function LuxeSculptPage() {
       {/* 💪 MUSCLE MAPPING */}
       <MuscleMapping />
 
-      {/* 🍑 REAR SUPPORT */}
+      {/* 🍑 REAR VIEW */}
       <RearView />
 
       {/* 🏅 ENDORSEMENTS */}
@@ -52,4 +54,3 @@ export default function LuxeSculptPage() {
     </main>
   );
 }
-
