@@ -11,15 +11,15 @@ export default function Head() {
       <meta name="theme-color" content="#000000" />
       <meta charSet="utf-8" />
 
-      {/* 🖼️ ICONS & MANIFEST (CACHE-BUSTED & RENAMED) */}
-      <link rel="icon" href="/favicon-new.png?v=4" />
-      <link rel="icon" href="/brand/favicon-new.png?v=4" />
+      {/* 💎 ICONS & MANIFEST (CACHE-BUSTED v2) */}
+      <link rel="icon" href="/favicon-v2.png?v=9" />
+      <link rel="icon" href="/brand/favicon-v2.png?v=9" />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
-        href="/brand/apple-touch-icon.png?v=4"
+        href="/brand/apple-touch-icon.png?v=9"
       />
-      <link rel="manifest" href="/manifest.json?v=4" />
+      <link rel="manifest" href="/manifest.json?v=9" />
 
       {/* 🧠 OPEN GRAPH / SOCIAL SHARE */}
       <meta
@@ -30,7 +30,7 @@ export default function Head() {
         property="og:description"
         content="Elite compression architecture designed by Sloane Sterling — performance without compromise."
       />
-      <meta property="og:image" content="/brand/favicon-new.png?v=4" />
+      <meta property="og:image" content="/brand/favicon-v2.png?v=9" />
       <meta
         property="og:url"
         content="https://luxesculptperformance.com"
@@ -48,11 +48,19 @@ export default function Head() {
         name="twitter:description"
         content="Sculpted precision for form, flow, and power — engineered to enhance movement and recovery."
       />
-      <meta name="twitter:image" content="/brand/favicon-new.png?v=4" />
+      <meta name="twitter:image" content="/brand/favicon-v2.png?v=9" />
 
-      {/* 💎 BRAND ACCENTS */}
+      {/* 🖤 BRAND TOUCHES */}
       <meta name="application-name" content="LUXESCULPT™" />
       <meta name="apple-mobile-web-app-title" content="LUXESCULPT™" />
+
+      {/* 🧩 FALLBACK ICONS FOR LEGACY BROWSERS */}
+      <link rel="shortcut icon" href="/brand/favicon-v2.png?v=9" type="image/png" />
+      <link rel="mask-icon" href="/brand/favicon-v2.png?v=9" color="#F5C84C" />
+
+      {/* ✨ BRAND COLOR ACCENTS */}
+      <meta name="msapplication-TileColor" content="#F5C84C" />
+      <meta name="theme-color" content="#000000" />
     </>
   );
 }
