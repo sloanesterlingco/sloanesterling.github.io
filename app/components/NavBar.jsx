@@ -2,23 +2,20 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ShoppingBag } from "lucide-react";
+import { ShoppingBag, Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 
-// ✨ LuxeSculpt™ Chime Effect — gentle golden ping
 const playChime = () => {
   const chime = new Audio("/brand/sounds/chime.mp3");
   chime.volume = 0.55;
-  chime.play().catch(() => {
-    console.warn("🔇 Chime blocked until user interacts with the page.");
-  });
+  chime.play().catch(() => {});
 };
 
 export default function NavBar() {
   const [hovered, setHovered] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
 
-  // 🎵 Unlock audio on first click
   useEffect(() => {
     const unlock = () => {
       const ctx = new (window.AudioContext || window.webkitAudioContext)();
@@ -62,6 +59,18 @@ export default function NavBar() {
           </Link>
         </div>
 
+        {/* 🍔 MOBILE MENU ICON */}
+        <button
+          onClick={() => {
+            playChime();
+            setMenuOpen(!menuOpen);
+            setOpenDropdown(null);
+          }}
+          className="md:hidden text-[#F5C84C] transition-all"
+        >
+          {menuOpen ? <X size={28} /> : <Menu size={28} />}
+        </button>
+
         {/* 🔗 NAV LINKS (Desktop) */}
         <div className="hidden md:flex items-center gap-10">
           {navItems.map((item) => (
@@ -92,16 +101,16 @@ export default function NavBar() {
                 {item.name}
               </Link>
 
-              {/* 💬 Dropdown */}
+              {/* 💬 Dropdown (Desktop) */}
               {item.name !== "BIO" && (
                 <div
                   className={`absolute top-12 left-1/2 transform -translate-x-1/2 
-                  bg-black/60 text-white text-sm font-medium tracking-wide px-8 py-3 
-                  min-w-[160px] text-center rounded-lg border border-[#F5C84C]/50 
-                  shadow-[0_0_15px_rgba(245,200,76,0.5)] backdrop-blur-md transition-all duration-500
-                  ${hovered === item.name
-                    ? "opacity-100 translate-y-0 animate-slideDown"
-                    : "opacity-0 translate-y-2 animate-slideUp pointer-events-none"}`}
+                    bg-black/60 text-white text-sm font-medium tracking-wide px-8 py-3 
+                    min-w-[160px] text-center rounded-lg border border-[#F5C84C]/50 
+                    shadow-[0_0_15px_rgba(245,200,76,0.5)] backdrop-blur-md transition-all duration-500
+                    ${hovered === item.name
+                      ? "opacity-100 translate-y-0 animate-slideDown"
+                      : "opacity-0 translate-y-2 animate-slideUp pointer-events-none"}`}
                 >
                   <span className="drop-shadow-[0_0_10px_rgba(245,200,76,0.7)] whitespace-nowrap">
                     Coming Soon
@@ -112,19 +121,45 @@ export default function NavBar() {
             </div>
           ))}
         </div>
-
-        {/* 🛒 ACTION BUTTONS */}
-        <div className="hidden md:flex items-center gap-4">
-          <Link
-            href="/cart"
-            onClick={playChime}
-            className="bg-[#F5C84C] text-black font-semibold px-6 py-2.5 rounded-full shadow-[0_0_20px_rgba(245,200,76,0.7)] hover:scale-105 hover:shadow-[0_0_30px_rgba(245,200,76,0.8)] transition-all"
-          >
-            Pre-Order
-          </Link>
-          <ShoppingBag className="w-6 h-6 text-white hover:text-[#F5C84C] transition-all cursor-pointer" />
-        </div>
       </div>
+
+      {/* 📱 MOBILE MENU */}
+      {menuOpen && (
+        <div className="md:hidden backdrop-glass text-white px-6 py-4 border-t border-[#F5C84C]/40 animate-slideDown">
+          {navItems.map((item) => (
+            <div key={item.name} className="py-3 border-b border-neutral-800">
+              <button
+                onClick={() => {
+                  playChime();
+                  setOpenDropdown(openDropdown === item.name ? null : item.name);
+                }}
+                className="w-full flex justify-between items-center text-left text-[#F5C84C] font-semibold tracking-wide"
+              >
+                <div className="flex items-center gap-3">
+                  <Image
+                    src={item.icon}
+                    alt={`${item.name} icon`}
+                    width={28}
+                    height={28}
+                    className="opacity-90"
+                  />
+                  <span>{item.name}</span>
+                </div>
+                <span>{openDropdown === item.name ? "▲" : "▼"}</span>
+              </button>
+
+              {/* Dropdown content */}
+              {openDropdown === item.name && item.name !== "BIO" && (
+                <div className="relative mt-3 bg-black/60 rounded-lg border border-[#F5C84C]/50 px-4 py-3 text-center text-sm animate-slideDown shadow-[0_0_20px_rgba(245,200,76,0.4)]">
+                  <p className="text-white/90">Coming Soon</p>
+                  <div className="absolute inset-0 pointer-events-none animate-tracer"></div>
+                  <div className="spark"></div>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+      )}
     </nav>
   );
 }
