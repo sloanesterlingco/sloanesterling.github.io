@@ -20,7 +20,6 @@ export default function NavBar() {
   return (
     <nav className="w-full fixed top-0 left-0 z-50 bg-gradient-to-b from-black via-neutral-900/95 to-black/80 backdrop-blur-xl border-b border-neutral-800 shadow-[0_0_25px_rgba(0,0,0,0.7)]">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-
         {/* 🌟 LOGO */}
         <Link href="/luxesculpt" className="flex items-center gap-3">
           <Image
@@ -58,8 +57,8 @@ export default function NavBar() {
                 <Image
                   src={item.icon}
                   alt={`${item.name} icon`}
-                  width={item.name === "BIO" ? 43 : 34}
-                  height={item.name === "BIO" ? 43 : 34}
+                  width={item.name === "BIO" ? 48 : 34}
+                  height={item.name === "BIO" ? 48 : 34}
                   className={`transition-all ${
                     hovered === item.name
                       ? "opacity-100 scale-110 drop-shadow-[0_0_12px_rgba(58,134,255,0.7)]"
@@ -69,7 +68,7 @@ export default function NavBar() {
                 {item.name}
               </Link>
 
-              {/* ✨ HOVER DROPDOWN */}
+              {/* ✨ DROPDOWN */}
               {item.name !== "BIO" && (
                 <div
                   className={`absolute top-12 left-1/2 transform -translate-x-1/2 bg-black/70 backdrop-blur-md border border-[#F5C84C]/40 rounded-lg shadow-[0_0_25px_rgba(245,200,76,0.6)] px-8 py-3 text-sm text-white font-medium tracking-wide text-center transition-all duration-500 ${
@@ -87,7 +86,7 @@ export default function NavBar() {
           ))}
         </div>
 
-        {/* 🛒 CART + MOBILE TOGGLE */}
+        {/* 🛒 CART + MOBILE MENU TOGGLE */}
         <div className="flex items-center gap-4">
           <Link
             href="/cart"
@@ -118,8 +117,8 @@ export default function NavBar() {
               <Image
                 src={item.icon}
                 alt={`${item.name} icon`}
-                width={item.name === "BIO" ? 43 : 34}
-                height={item.name === "BIO" ? 43 : 34}
+                width={item.name === "BIO" ? 48 : 34}
+                height={item.name === "BIO" ? 48 : 34}
                 className={`${
                   item.name === "BIO"
                     ? "rounded-full bg-transparent"
