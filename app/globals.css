@@ -135,3 +135,35 @@ button:hover {
     background: rgba(0, 0, 0, 0.85);
   }
 }
+@keyframes glowGold {
+  0%, 100% {
+    opacity: 0.5;
+    box-shadow: 0 0 10px rgba(245, 200, 76, 0.6), 0 0 20px rgba(245, 200, 76, 0.4);
+  }
+  50% {
+    opacity: 0.9;
+    box-shadow: 0 0 20px rgba(245, 200, 76, 0.9), 0 0 40px rgba(245, 200, 76, 0.7);
+  }
+}
+
+.animate-glowGold {
+  animation: glowGold 3s ease-in-out infinite;
+}
+
+.animate-pulseGold {
+  animation: glowGold 3s ease-in-out infinite;
+}
+@keyframes bioPulse {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(245, 200, 76, 0.6),
+                0 0 16px rgba(245, 200, 76, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 14px rgba(245, 200, 76, 0.9),
+                0 0 26px rgba(245, 200, 76, 0.5);
+  }
+}
+
+.animate-bioPulse {
+  animation: bioPulse 2.8s ease-in-out infinite;
+}
