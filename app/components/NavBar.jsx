@@ -18,16 +18,16 @@ export default function NavBar() {
   ];
 
   return (
-    <nav className="w-full fixed top-0 left-0 z-50 bg-gradient-to-b from-black via-neutral-900/95 to-black/80 backdrop-blur-xl border-b border-neutral-800 shadow-[0_0_25px_rgba(0,0,0,0.7)]">
+    <nav className="fixed top-0 left-0 w-full z-50 bg-black/80 backdrop-blur-xl border-b border-[#F5C84C]/25 shadow-[0_0_15px_rgba(245,200,76,0.25)]">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
 
-        {/* 🌟 MAIN LOGO — clickable home link */}
+        {/* 🌟 LOGO — links to LuxeSculpt homepage */}
         <Link href="/luxesculpt" className="flex items-center gap-3 group">
           <Image
             src="/brand/LUXESCULPT-ICON.PNG"
             alt="LuxeSculpt Logo"
-            width={36}
-            height={36}
+            width={38}
+            height={38}
             className="object-contain drop-shadow-[0_0_10px_rgba(245,200,76,0.7)] group-hover:scale-110 transition-transform duration-300"
           />
           <div>
@@ -40,7 +40,7 @@ export default function NavBar() {
           </div>
         </Link>
 
-        {/* 🔗 NAV LINKS */}
+        {/* 🔗 DESKTOP LINKS */}
         <div className="hidden md:flex items-center gap-10">
           {navItems.map((item) => (
             <div
@@ -58,37 +58,36 @@ export default function NavBar() {
                 <Image
                   src={item.icon}
                   alt={`${item.name} icon`}
-                  width={item.name === "BIO" ? 42 : 34}
-                  height={item.name === "BIO" ? 42 : 34}
+                  width={item.name === "BIO" ? 45 : 34}
+                  height={item.name === "BIO" ? 45 : 34}
                   className={`transition-all ${
                     hovered === item.name
-                      ? "opacity-100 scale-110 drop-shadow-[0_0_12px_rgba(245,200,76,0.8)]"
+                      ? "opacity-100 scale-110 drop-shadow-[0_0_10px_rgba(245,200,76,0.8)]"
                       : "opacity-85 scale-100"
-                  } ${item.name === "BIO" ? "rounded-full bg-transparent animate-bio-glow" : ""}`}
+                  } ${item.name === "BIO" ? "rounded-full animate-bio-glow" : ""}`}
                 />
                 {item.name}
               </Link>
 
-              {/* 💬 DROPDOWN LABELS */}
+              {/* Dropdown */}
               {item.name !== "BIO" && (
                 <div
-                  className={`absolute top-12 left-1/2 transform -translate-x-1/2 bg-black/70 backdrop-blur-md text-white text-sm font-medium tracking-wide px-8 py-3 min-w-[160px] text-center rounded-lg border border-[#F5C84C]/40 glass-panel transition-all duration-300 ${
+                  className={`absolute top-12 left-1/2 transform -translate-x-1/2 bg-black/80 text-white text-sm font-medium px-6 py-2 rounded-lg border border-[#F5C84C]/40 transition-all duration-300 backdrop-blur-md ${
                     hovered === item.name
                       ? "opacity-100 translate-y-0"
                       : "opacity-0 translate-y-2 pointer-events-none"
                   }`}
                 >
-                  <span className="drop-shadow-[0_0_10px_rgba(245,200,76,0.7)] whitespace-nowrap">
+                  <span className="text-[#F5C84C]/90 whitespace-nowrap">
                     Coming Soon
                   </span>
-                  <div className="tracer-light"></div>
                 </div>
               )}
             </div>
           ))}
         </div>
 
-        {/* 🛒 ACTION BUTTONS */}
+        {/* 🛒 CART BUTTON */}
         <div className="hidden md:flex items-center gap-4">
           <Link
             href="/cart"
@@ -99,20 +98,20 @@ export default function NavBar() {
           <ShoppingBag className="w-6 h-6 text-white hover:text-[#F5C84C] transition-all cursor-pointer" />
         </div>
 
-        {/* 📱 MOBILE MENU BUTTON */}
+        {/* 📱 MOBILE MENU TOGGLE */}
         <div className="md:hidden">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="text-[#F5C84C] focus:outline-none"
+            className="text-[#F5C84C] text-2xl focus:outline-none"
           >
             {menuOpen ? "✕" : "☰"}
           </button>
         </div>
       </div>
 
-      {/* 📱 MOBILE DROPDOWN */}
+      {/* 📱 MOBILE MENU */}
       {menuOpen && (
-        <div className="md:hidden bg-black/85 backdrop-blur-md border-t border-[#F5C84C]/40 animate-mobile-slide-down">
+        <div className="md:hidden bg-black/90 backdrop-blur-md border-t border-[#F5C84C]/40 animate-mobile-slide-down">
           {navItems.map((item) => (
             <Link
               key={item.name}
@@ -123,8 +122,8 @@ export default function NavBar() {
               <Image
                 src={item.icon}
                 alt={`${item.name} icon`}
-                width={item.name === "BIO" ? 42 : 34}
-                height={item.name === "BIO" ? 42 : 34}
+                width={item.name === "BIO" ? 45 : 34}
+                height={item.name === "BIO" ? 45 : 34}
                 className={`${
                   item.name === "BIO" ? "rounded-full animate-bio-glow" : ""
                 }`}
