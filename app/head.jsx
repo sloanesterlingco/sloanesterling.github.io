@@ -1,6 +1,7 @@
 export default function Head() {
   return (
     <>
+      {/* 🏷️ META BASICS */}
       <title>LUXESCULPT™ | Precision Engineered Activewear</title>
       <meta
         name="description"
@@ -8,13 +9,15 @@ export default function Head() {
       />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="theme-color" content="#000000" />
+      <meta charSet="utf-8" />
 
-      {/* ✅ Corrected favicon and icons */}
+      {/* 🖼️ ICONS & MANIFEST */}
       <link rel="icon" href="/brand/favicon.png" />
-      <link rel="apple-touch-icon" href="/brand/apple-touch-icon.png" />
+      <link rel="apple-touch-icon" sizes="180x180" href="/brand/apple-touch-icon.png" />
+      <link rel="icon" type="image/png" sizes="32x32" href="/brand/favicon-32x32.png" />
       <link rel="manifest" href="/manifest.json" />
 
-      {/* ✅ Open Graph / SEO */}
+      {/* 🧠 OPEN GRAPH / SOCIAL SHARE */}
       <meta property="og:title" content="LUXESCULPT™ | Precision Engineered Activewear" />
       <meta
         property="og:description"
@@ -23,8 +26,9 @@ export default function Head() {
       <meta property="og:image" content="/brand/favicon.png" />
       <meta property="og:url" content="https://luxesculptperformance.com" />
       <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="LUXESCULPT™" />
 
-      {/* ✅ Twitter Card */}
+      {/* 🐦 TWITTER CARD */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="LUXESCULPT™ | Precision Engineered Activewear" />
       <meta
@@ -32,6 +36,10 @@ export default function Head() {
         content="Sculpted precision for form, flow, and power — engineered to enhance movement and recovery."
       />
       <meta name="twitter:image" content="/brand/favicon.png" />
+
+      {/* 💎 BRAND ACCENTS */}
+      <meta name="application-name" content="LUXESCULPT™" />
+      <meta name="apple-mobile-web-app-title" content="LUXESCULPT™" />
     </>
   );
 }
