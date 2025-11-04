@@ -1,218 +1,152 @@
-/* 🌍 GLOBAL STYLING FOR LUXESCULPT™ PERFORMANCE HOUSE */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-/* ——— RESET & BASE ——— */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* 🖤 GLOBAL THEME — LUXESCULPT */
 html,
 body {
+  margin: 0;
+  padding: 0;
   background-color: #000;
   color: #fff;
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", "Helvetica Neue", sans-serif;
+  overflow-x: hidden;
   scroll-behavior: smooth;
-  overscroll-behavior: none;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  letter-spacing: 0.05em;
-}
-
-p {
-  line-height: 1.6;
-  opacity: 0.85;
-}
-
-/* ——— ANIMATIONS ——— */
-@keyframes fadeIn {
-  to { opacity: 1; }
-}
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 1.2s ease-out forwards;
-}
-
-@keyframes slide-down {
-  0% { opacity: 0; transform: translateY(-10px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-.animate-slide-down {
-  animation: slide-down 0.4s ease-out forwards;
-}
-
-@keyframes mobile-slide-down {
-  0% { opacity: 0; transform: translateY(-20px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-.animate-mobile-slide-down {
-  animation: mobile-slide-down 0.5s ease-out forwards;
-}
-
-@keyframes slide-up-fade {
-  0% { opacity: 1; transform: translateY(0); }
-  100% { opacity: 0; transform: translateY(-20px); }
-}
-.animate-slide-up-fade {
-  animation: slide-up-fade 0.5s ease-in forwards;
-}
-
-/* ——— GOLD EFFECTS ——— */
-@keyframes pulse-gold {
-  0%, 100% {
-    filter: drop-shadow(0 0 6px rgba(245,200,76,0.7));
-  }
-  50% {
-    filter: drop-shadow(0 0 16px rgba(245,200,76,0.9));
-  }
-}
-.animate-pulse-gold {
-  animation: pulse-gold 3s infinite ease-in-out;
-}
-
-@keyframes bio-glow {
-  0%, 100% {
-    box-shadow: 0 0 12px rgba(245,200,76,0.8);
-  }
-  50% {
-    box-shadow: 0 0 22px rgba(245,200,76,1);
-  }
-}
-.animate-bio-glow {
-  animation: bio-glow 2s infinite ease-in-out;
-}
-
-@keyframes tracer-light {
-  0% { opacity: 0; transform: translateX(-100%); }
-  50% { opacity: 1; }
-  100% { opacity: 0; transform: translateX(100%); }
-}
-.tracer-light {
-  position: absolute;
-  top: 0; left: 0;
-  height: 1px; width: 100%;
-  background: linear-gradient(to right, transparent, rgba(245,200,76,0.8), transparent);
-  animation: tracer-light 3.5s infinite linear;
-}
-
-/* ——— GLASS PANEL ——— */
-.glass-panel {
-  background: rgba(0, 0, 0, 0.6);
-  border: 1px solid rgba(245,200,76,0.25);
-  box-shadow: 0 0 25px rgba(245,200,76,0.2);
+/* 🪞 NAVIGATION BAR */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
   backdrop-filter: blur(10px);
-  border-radius: 12px;
-  transition: all 0.3s ease;
-}
-.glass-panel:hover {
-  box-shadow: 0 0 35px rgba(245,200,76,0.35);
-  border-color: rgba(245,200,76,0.4);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+  background: rgba(0, 0, 0, 0.75);
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.1);
 }
 
-/* ——— AMBIENT BACKGROUND ——— */
-@keyframes ambient-glow {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-.bg-ambient {
-  background: linear-gradient(135deg,
-    rgba(245,200,76,0.15),
-    rgba(0,0,0,0.85),
-    rgba(245,200,76,0.1)
-  );
-  background-size: 200% 200%;
-  animation: ambient-glow 10s ease-in-out infinite;
+/* ✨ HOVER & GOLD EFFECTS */
+a,
+button {
+  transition: all 0.3s ease-in-out;
 }
 
-/* ——— BUTTONS & EFFECTS ——— */
-button, .btn {
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-button:hover, .btn:hover {
-  transform: scale(1.05);
-  filter: drop-shadow(0 0 10px rgba(245,200,76,0.6));
+a:hover,
+button:hover {
+  color: #ffd700;
+  filter: drop-shadow(0 0 6px rgba(255, 215, 0, 0.6));
 }
 
-/* Ripple feedback */
-button::after {
-  content: "";
-  position: absolute;
-  background: rgba(245,200,76,0.4);
+/* 💫 GOLD PULSE AROUND BIO ICON */
+@keyframes goldPulse {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+  }
+}
+
+.bio-icon {
+  animation: goldPulse 3s infinite ease-in-out;
   border-radius: 50%;
-  transform: scale(0);
+}
+
+/* 🎞️ HERO VIDEO + IMAGE */
+video,
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* 🪄 MICRO SPARK (for hover sparkle detail) */
+@keyframes spark {
+  0% {
+    opacity: 0;
+    transform: scale(0.5) translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1) translateY(-2px);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5) translateY(0);
+  }
+}
+
+.spark {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #ffd700;
+  border-radius: 50%;
   opacity: 0;
-  pointer-events: none;
-}
-button:active::after {
-  animation: ripple 0.6s linear;
-}
-@keyframes ripple {
-  0% { transform: scale(0); opacity: 1; }
-  100% { transform: scale(4); opacity: 0; }
+  animation: spark 1.5s infinite;
 }
 
-/* ——— PAGE TRANSITIONS ——— */
-.page-transition {
-  opacity: 0;
-  transition: opacity 0.4s ease-in-out;
-}
-.page-transition.active {
-  opacity: 1;
-}
-
-/* ——— SECTION DIVIDERS ——— */
-.section-divider {
-  width: 80%;
-  height: 1px;
-  margin: 3rem auto;
-  background: linear-gradient(to right, transparent, rgba(245,200,76,0.6), transparent);
-  opacity: 0.5;
+/* 🧱 LUXE UTILITIES */
+.glass {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
 }
 
-/* ——— CARD HOVER ——— */
-.card-hover {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.card-hover:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 30px rgba(245,200,76,0.2);
+.gold-border {
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
 }
 
-/* ——— SCROLLBAR ——— */
-::-webkit-scrollbar { width: 8px; }
-::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg,
-    rgba(245,200,76,0.7),
-    rgba(245,200,76,0.3)
-  );
-  border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(245,200,76,0.9);
+/* ✨ BUTTON GLOW */
+.button-gold {
+  background: #ffd700;
+  color: #000;
+  border-radius: 9999px;
+  padding: 0.6rem 1.4rem;
+  font-weight: 600;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+  transition: all 0.3s ease;
 }
 
-/* ——— MEDIA RESPONSIVE ——— */
-@media (max-width: 1024px) {
-  .fade-in { animation-duration: 1s; }
-}
-@media (max-width: 768px) {
-  nav { backdrop-filter: blur(20px); }
-  .glass-panel { border-radius: 8px; }
+.button-gold:hover {
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
+  transform: translateY(-1px);
 }
 
-/* ——— AUDIO CLICK SUPPORT (optional future) ——— */
-.audio-click {
-  outline: none;
-  user-select: none;
+/* 🔽 DROP-DOWN ANIMATIONS */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+.dropdown-open {
+  animation: slideDown 0.4s ease forwards;
+}
+
+.dropdown-close {
+  animation: slideUpFade 0.3s ease forwards;
 }
