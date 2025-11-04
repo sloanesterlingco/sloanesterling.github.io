@@ -1,0 +1,5 @@
+1:"$Sreact.fragment"
+2:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"OutletBoundary"]
+3:"$Sreact.suspense"
+0:{"buildId":"RhF0kBgLWW7NMyjsxA3SB","rsc":["$","$1","c",{"children":[["$","main",null,{"className":"flex flex-col items-center justify-center min-h-screen bg-black text-white text-center px-6 fade-in","children":[["$","div",null,{"className":"max-w-2xl","children":[["$","h1",null,{"className":"text-5xl font-extrabold tracking-tight mb-6","children":"LUXESCULPT™"}],["$","p",null,{"className":"text-lg opacity-80 leading-relaxed","children":"Precision Engineered Activewear. Sculpted for form, flow, and performance. Crafted by Sloane Sterling — athlete, creator, and e-commerce innovator."}]]}],["$","div",null,{"className":"mt-10 text-sm opacity-60","children":["$","p",null,{"children":"Designed by Sloane Sterling • luxesculptperformance.com"}]}]]}],null,["$","$L2",null,{"children":["$","$3",null,{"name":"Next.MetadataOutlet","children":"$@4"}]}]]}],"loading":null,"isPartial":false}
+4:null

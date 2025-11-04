@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  turbopack: {} // empty config = safe default
+  output: 'standalone',
+  images: {
+    domains: ['luxesculptperformance.com'],
+  },
 };
 
 export default nextConfig;
