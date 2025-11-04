@@ -66,5 +66,40 @@ export default function NavBar() {
                     hovered === item.name
                       ? "opacity-100 scale-110 drop-shadow-[0_0_12px_rgba(58,134,255,0.7)]"
                       : "opacity-80 scale-100"
-                  } ${item.name === "BI
+                  } ${item.name === "BIO" ? "rounded-full bg-transparent" : ""}`}
+                />
+                {item.name}
+              </Link>
 
+              {/* 💬 DROPDOWN */}
+              {item.name !== "BIO" && (
+                <div
+                  className={`absolute top-12 left-1/2 transform -translate-x-1/2 bg-black/95 text-white text-sm font-medium tracking-wide px-8 py-3 min-w-[160px] text-center rounded-lg shadow-[0_0_25px_rgba(245,200,76,0.6)] backdrop-blur-md border border-[#F5C84C]/40 transition-all duration-300 ${
+                    hovered === item.name
+                      ? "opacity-100 translate-y-0"
+                      : "opacity-0 translate-y-2 pointer-events-none"
+                  }`}
+                >
+                  <span className="drop-shadow-[0_0_10px_rgba(245,200,76,0.7)] whitespace-nowrap">
+                    Coming Soon
+                  </span>
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+
+        {/* 🛒 ACTION BUTTONS */}
+        <div className="flex items-center gap-4">
+          <Link
+            href="/cart"
+            className="bg-[#F5C84C] text-black font-semibold px-6 py-2.5 rounded-full shadow-[0_0_20px_rgba(245,200,76,0.7)] hover:scale-105 hover:shadow-[0_0_30px_rgba(245,200,76,0.8)] transition-all"
+          >
+            Pre-Order
+          </Link>
+          <ShoppingBag className="w-6 h-6 text-white hover:text-[#F5C84C] transition-all cursor-pointer" />
+        </div>
+      </div>
+    </nav>
+  );
+}
