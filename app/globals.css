@@ -2,144 +2,143 @@
 @tailwind components;
 @tailwind utilities;
 
-/* === GLOBAL STYLING === */
-html, body {
+/* ============================================
+   GLOBAL BASE STYLES
+============================================ */
+html,
+body {
   scroll-behavior: smooth;
   background-color: #000;
-  color: #fff;
+  color: white;
   font-family: 'Inter', sans-serif;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-/* === LUXESCULPT™ ANIMATION SUITE === */
-
-/* 🪄 Slide-down (open menu) */
+/* ============================================
+   NAVBAR EFFECTS
+============================================ */
 @keyframes slideDown {
   0% {
     opacity: 0;
-    transform: translateY(-10%);
-    filter: blur(6px);
+    transform: translateY(-10px);
   }
   100% {
     opacity: 1;
     transform: translateY(0);
-    filter: blur(0);
   }
 }
 
-.animate-slideDown {
-  animation: slideDown 0.45s cubic-bezier(0.25, 0.8, 0.3, 1) forwards;
-}
-
-/* 🪞 Slide-up (close menu) */
 @keyframes slideUp {
   0% {
     opacity: 1;
     transform: translateY(0);
-    filter: blur(0);
   }
   100% {
     opacity: 0;
-    transform: translateY(-10%);
-    filter: blur(6px);
+    transform: translateY(-10px);
   }
+}
+
+.animate-slideDown {
+  animation: slideDown 0.45s ease-out forwards;
 }
 
 .animate-slideUp {
-  animation: slideUp 0.4s ease-in-out forwards;
+  animation: slideUp 0.4s ease-in forwards;
 }
 
-/* ⚡ Gold tracer light pulse */
-@keyframes goldTracer {
+/* ============================================
+   GOLD TRACER EFFECT
+============================================ */
+@keyframes tracer {
   0% {
-    border-color: rgba(245, 200, 76, 0);
-    box-shadow: inset 0 0 0 rgba(245, 200, 76, 0);
-  }
-  30% {
-    border-color: rgba(245, 200, 76, 0.3);
-    box-shadow: inset 0 0 25px rgba(245, 200, 76, 0.2),
-                0 0 15px rgba(245, 200, 76, 0.4);
-  }
-  60% {
-    border-color: rgba(245, 200, 76, 0.5);
-    box-shadow: inset 0 0 35px rgba(245, 200, 76, 0.25),
-                0 0 25px rgba(245, 200, 76, 0.5);
-  }
-  100% {
-    border-color: rgba(245, 200, 76, 0.15);
-    box-shadow: inset 0 0 0 rgba(245, 200, 76, 0);
-  }
-}
-
-.animate-goldTracer {
-  animation: goldTracer 1.8s ease-in-out;
-}
-
-/* 🌠 Micro spark streak */
-@keyframes sparkRun {
-  0% {
-    background: linear-gradient(
-      90deg,
-      rgba(245, 200, 76, 0) 0%,
-      rgba(245, 200, 76, 0.9) 50%,
-      rgba(245, 200, 76, 0) 100%
-    );
     opacity: 0;
-    transform: translateX(-50%) scaleX(0.2);
+    transform: scaleX(0) translateX(0);
   }
-  20% {
-    opacity: 1;
-    transform: translateX(0) scaleX(1);
-  }
-  80% {
-    opacity: 1;
-    transform: translateX(100%) scaleX(1);
+  40% {
+    opacity: 0.7;
+    transform: scaleX(1.05) translateX(100%);
   }
   100% {
     opacity: 0;
-    transform: translateX(150%) scaleX(0.3);
+    transform: scaleX(1.2) translateX(200%);
   }
 }
 
-.sparkline {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 2px;
-  width: 100%;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.sparkline::before {
+.animate-tracer::before {
   content: "";
   position: absolute;
   top: 0;
-  left: 0;
-  width: 30%;
+  left: -50%;
+  width: 100%;
   height: 100%;
-  animation: sparkRun 1.2s ease-in-out;
+  background: linear-gradient(90deg, transparent, #f5c84c, transparent);
+  opacity: 0.4;
+  transform-origin: left;
+  animation: tracer 2s ease-in-out infinite;
 }
 
-/* ✨ Gold fade pulse (optional brand glow behind logo) */
-@keyframes goldPulse {
+/* ============================================
+   MICRO SPARK
+============================================ */
+@keyframes spark {
   0% {
     opacity: 0;
-    filter: drop-shadow(0 0 0 rgba(245, 200, 76, 0));
+    transform: scale(0.5) translateY(0);
   }
-  50% {
+  40% {
     opacity: 1;
-    filter: drop-shadow(0 0 20px rgba(245, 200, 76, 0.9));
+    transform: scale(1.1) translateY(-3px);
   }
   100% {
     opacity: 0;
-    filter: drop-shadow(0 0 0 rgba(245, 200, 76, 0));
+    transform: scale(0.5) translateY(0);
   }
 }
 
-.animate-goldPulse {
-  animation: goldPulse 1.2s ease-in-out;
+.spark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  height: 4px;
+  background: radial-gradient(circle, #f5c84c 0%, transparent 70%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: spark 1.5s ease-in-out infinite;
+}
+
+/* ============================================
+   BACKDROP GLASS
+============================================ */
+.backdrop-glass {
+  backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 17, 17, 0.65);
+  border: 1px solid rgba(245, 200, 76, 0.4);
+  box-shadow: 0 0 25px rgba(245, 200, 76, 0.2);
+}
+
+/* ============================================
+   MOBILE MENU SMOOTHNESS
+============================================ */
+@media (max-width: 768px) {
+  .animate-slideDown {
+    animation: slideDown 0.35s ease-out forwards;
+  }
+  .animate-slideUp {
+    animation: slideUp 0.35s ease-in forwards;
+  }
+}
+
+/* ============================================
+   SCROLLBAR LUXE STYLE
+============================================ */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #f5c84c, #3a2f00);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ffe084, #5c4400);
 }
