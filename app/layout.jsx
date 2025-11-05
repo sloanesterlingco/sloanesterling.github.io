@@ -1,7 +1,4 @@
-git add app/layout.jsx
-git commit -m "Trigger Vercel redeploy (layout stable)"
-git push origin main
-
+// Trigger redeploy build — local version verified
 import "./globals.css";
 import NavBar from "./components/NavBar";
 
