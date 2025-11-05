@@ -1,3 +1,7 @@
+git add app/layout.jsx
+git commit -m "Trigger Vercel redeploy (layout stable)"
+git push origin main
+
 import "./globals.css";
 import NavBar from "./components/NavBar";
 
