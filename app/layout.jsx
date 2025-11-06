@@ -1,22 +1,25 @@
-// Trigger redeploy build — local version verified
 import "./globals.css";
-import NavBar from "./components/NavBar";
+import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "LUXESCULPT™ | Limited Production",
-  description:
-    "Adaptive Compression Architecture — Sculpted precision for form, flow, and power. Engineered to enhance movement, recovery, and performance.",
+  title: "LuxeSculpt™ — Engineered for Movement",
+  description: "Adaptive compression architecture for form, flow, and power.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head />
-      <body className="bg-black text-white min-h-screen overflow-x-hidden">
+      <body className="bg-black text-white antialiased">
+        {/* Global, fixed navbar */}
         <NavBar />
-        <main>{children}</main>
+
+        {/* Offset to clear the fixed navbar height */}
+        <div className="pt-[72px]">{children}</div>
+
+        {/* Single global footer */}
+        <Footer />
       </body>
     </html>
   );
 }
-

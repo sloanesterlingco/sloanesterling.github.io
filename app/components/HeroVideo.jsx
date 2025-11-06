@@ -18,6 +18,7 @@ export default function HeroVideo() {
 
   return (
     <div className="relative w-full h-screen overflow-hidden">
+      {/* 🎥 Background Video */}
       <video
         ref={videoRef}
         autoPlay
@@ -26,11 +27,15 @@ export default function HeroVideo() {
         playsInline
         preload="auto"
         src="/assets/hero.mp4"
-        className="absolute inset-0 w-full h-full object-contain object-center"
+        className="absolute inset-0 w-full h-full object-cover object-center"
       />
-      <div className="absolute inset-0 bg-black/30" />
+
+      {/* 🌤️ Light Luxe Overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/25 to-black/60" />
+
+      {/* 🩶 Content Overlay */}
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
-        <h1 className="text-6xl md:text-8xl font-extrabold tracking-tight">
+        <h1 className="text-6xl md:text-8xl font-extrabold tracking-tight text-[#F5C84C] drop-shadow-[0_0_25px_rgba(245,200,76,0.6)]">
           LuxeSculpt™
         </h1>
         <p className="text-xl md:text-3xl text-neutral-300 mt-4 max-w-3xl">

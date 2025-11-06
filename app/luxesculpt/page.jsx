@@ -3,61 +3,55 @@
 import dynamic from "next/dynamic";
 import React from "react";
 
-// 🧠 Dynamic safe imports — page won't go blank if one fails
-const NavBar = dynamic(() => import("../components/NavBar").catch(() => () => (
-  <div className="text-red-500 text-center p-6">⚠️ NavBar failed to load</div>
-)), { ssr: false });
+/**
+ * NOTE:
+ * NavBar and Footer are rendered globally in app/layout.jsx.
+ * Do NOT import them here to avoid duplicates.
+ */
 
-const HeroSection = dynamic(() => import("./HeroSection").catch(() => () => (
-  <div className="text-red-500 text-center p-6">⚠️ HeroSection failed</div>
-)), { ssr: false });
+// Page sections in app/luxesculpt
+const HeroSection   = dynamic(() => import("./HeroSection"),   { ssr: false });
+const FabricSection = dynamic(() => import("./FabricSection"), { ssr: false });
+const MuscleMapping = dynamic(() => import("./MuscleMapping"), { ssr: false });
+const RearView      = dynamic(() => import("./RearView"),      { ssr: false });
+const Endorsements  = dynamic(() => import("./Endorsements"),  { ssr: false });
 
-const FabricSection = dynamic(() => import("./FabricSection").catch(() => () => (
-  <div className="text-red-500 text-center p-6">⚠️ FabricSection failed</div>
-)), { ssr: false });
-
-const MuscleMapping = dynamic(() => import("./MuscleMapping").catch(() => () => (
-  <div className="text-red-500 text-center p-6">⚠️ MuscleMapping failed</div>
-)), { ssr: false });
-
-const RearView = dynamic(() => import("./RearView").catch(() => () => (
-  <div className="text-red-500 text-center p-6">⚠️ RearView failed</div>
-)), { ssr: false });
-
-const Endorsements = dynamic(() => import("./Endorsements").catch(() => () => (
-  <div className="text-red-500 text-center p-6">⚠️ Endorsements failed</div>
-)), { ssr: false });
+// CTA lives in app/components/CTASection.jsx  ← (PLURAL: components)
+const CTASection    = dynamic(() => import("../components/CTASection"), { ssr: false });
 
 export default function LuxeSculptPage() {
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen bg-black text-white fade-in">
-      {/* 🌟 NAVBAR */}
-      <NavBar />
-
-      {/* 🏆 HERO SECTION */}
+    <main className="flex flex-col items-center justify-center bg-black text-white">
+      {/* 🎥 HERO */}
       <section id="hero" className="w-full">
         <HeroSection />
       </section>
 
-      {/* 🧵 FABRIC SECTION */}
+      {/* 🧵 FABRIC */}
       <section id="fabric" className="w-full">
         <FabricSection />
       </section>
 
-      {/* 💪 MUSCLE MAPPING SECTION */}
+      {/* 💪 MUSCLE MAPPING */}
       <section id="muscle-mapping" className="w-full">
         <MuscleMapping />
       </section>
 
-      {/* 🔙 REAR VIEW SECTION */}
+      {/* 🔙 REAR VIEW */}
       <section id="rear-view" className="w-full">
         <RearView />
       </section>
 
-      {/* ⭐ ENDORSEMENTS SECTION */}
+      {/* ⭐ ENDORSEMENTS */}
       <section id="endorsements" className="w-full">
         <Endorsements />
+      </section>
+
+      {/* 💎 CALL TO ACTION */}
+      <section id="cta" className="w-full">
+        <CTASection />
       </section>
     </main>
   );
 }
+
