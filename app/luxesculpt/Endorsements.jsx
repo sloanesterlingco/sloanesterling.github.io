@@ -1,53 +1,48 @@
 "use client";
-import Image from "next/image";
 
 export default function Endorsements() {
   return (
-    <section className="relative w-full bg-black text-white py-24 px-6 border-t border-gray-800 text-center overflow-hidden">
-      {/* faint header image for texture */}
-      <div className="absolute inset-0 pointer-events-none opacity-10">
-        <Image
-          src="/images/luxesculpt/frontimage.png"
-          alt="LuxeSculpt front view"
-          fill
-          className="object-cover"
-          sizes="100vw"
-          priority
-        />
-      </div>
-
-      <h2 className="relative z-10 text-[#F5C84C] font-semibold text-2xl mb-10 tracking-wide uppercase">
-        Endorsed by Elite Performers
+    <section className="relative w-full bg-black text-white py-16 flex flex-col items-center justify-center overflow-hidden">
+      {/* Title */}
+      <h2 className="text-3xl md:text-4xl font-semibold tracking-wide mb-10">
+        Endorsed by Elite Performance
       </h2>
 
-      <div className="relative z-10 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div className="bg-gray-900/60 rounded-2xl p-6 shadow-md hover:shadow-[#F5C84C]/20 transition-all duration-300">
-          <p className="italic text-gray-200 mb-3 leading-relaxed">
-            “The most precise compression I’ve worn — performance armor.”
-          </p>
-          <p className="text-[#F5C84C] font-semibold text-sm tracking-wider">
-            — Trainer A. Vega
-          </p>
+      {/* Logos or Testimonials */}
+      <div className="flex flex-wrap justify-center gap-10 px-6 max-w-6xl">
+        <div className="text-center space-y-3">
+          <img
+            src="/endorsement-athlete.png"
+            alt="Elite Athlete endorsement"
+            className="w-28 h-28 mx-auto rounded-full object-cover"
+          />
+          <p className="text-lg font-light">“Precision. Power. Unmatched.”</p>
+          <p className="text-sm opacity-70">– Luxe Athlete Team</p>
         </div>
 
-        <div className="bg-gray-900/60 rounded-2xl p-6 shadow-md hover:shadow-[#F5C84C]/20 transition-all duration-300">
-          <p className="italic text-gray-200 mb-3 leading-relaxed">
-            “Mid-sprint support you can feel. Total control.”
-          </p>
-          <p className="text-[#F5C84C] font-semibold text-sm tracking-wider">
-            — Runner K. Tanaka
-          </p>
+        <div className="text-center space-y-3">
+          <img
+            src="/endorsement-coach.png"
+            alt="Coach endorsement"
+            className="w-28 h-28 mx-auto rounded-full object-cover"
+          />
+          <p className="text-lg font-light">“Engineered for serious performance.”</p>
+          <p className="text-sm opacity-70">– Pro Coach</p>
         </div>
 
-        <div className="bg-gray-900/60 rounded-2xl p-6 shadow-md hover:shadow-[#F5C84C]/20 transition-all duration-300">
-          <p className="italic text-gray-200 mb-3 leading-relaxed">
-            “From yoga to plyo — compression, lift, breathability: flawless.”
-          </p>
-          <p className="text-[#F5C84C] font-semibold text-sm tracking-wider">
-            — Coach J. Moreno
-          </p>
+        <div className="text-center space-y-3">
+          <img
+            src="/endorsement-runner.png"
+            alt="Runner endorsement"
+            className="w-28 h-28 mx-auto rounded-full object-cover"
+          />
+          <p className="text-lg font-light">“Every detail supports motion.”</p>
+          <p className="text-sm opacity-70">– LuxeRun Division</p>
         </div>
       </div>
+
+      {/* Clean fade separator to CTA */}
+      <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-black to-transparent pointer-events-none" />
     </section>
   );
 }

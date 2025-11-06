@@ -3,51 +3,43 @@
 import dynamic from "next/dynamic";
 import React from "react";
 
-/**
- * NOTE:
- * NavBar and Footer are rendered globally in app/layout.jsx.
- * Do NOT import them here to avoid duplicates.
- */
-
-// Page sections in app/luxesculpt
-const HeroSection   = dynamic(() => import("./HeroSection"),   { ssr: false });
+// ✅ Dynamic imports for smooth client-side rendering
+const HeroSection = dynamic(() => import("./HeroSection"), { ssr: false });
 const FabricSection = dynamic(() => import("./FabricSection"), { ssr: false });
 const MuscleMapping = dynamic(() => import("./MuscleMapping"), { ssr: false });
-const RearView      = dynamic(() => import("./RearView"),      { ssr: false });
-const Endorsements  = dynamic(() => import("./Endorsements"),  { ssr: false });
-
-// CTA lives in app/components/CTASection.jsx  ← (PLURAL: components)
-const CTASection    = dynamic(() => import("../components/CTASection"), { ssr: false });
+const RearView = dynamic(() => import("./RearView"), { ssr: false });
+const Endorsements = dynamic(() => import("./Endorsements"), { ssr: false });
+const CTASection = dynamic(() => import("../components/CTASection.jsx"), { ssr: false });
 
 export default function LuxeSculptPage() {
   return (
-    <main className="flex flex-col items-center justify-center bg-black text-white">
-      {/* 🎥 HERO */}
+    <main className="flex flex-col items-center justify-center min-h-screen bg-black text-white fade-in">
+      {/* 🏆 HERO SECTION */}
       <section id="hero" className="w-full">
         <HeroSection />
       </section>
 
-      {/* 🧵 FABRIC */}
+      {/* 🧵 FABRIC SECTION */}
       <section id="fabric" className="w-full">
         <FabricSection />
       </section>
 
-      {/* 💪 MUSCLE MAPPING */}
+      {/* 💪 MUSCLE MAPPING SECTION */}
       <section id="muscle-mapping" className="w-full">
         <MuscleMapping />
       </section>
 
-      {/* 🔙 REAR VIEW */}
+      {/* 🔙 REAR VIEW SECTION */}
       <section id="rear-view" className="w-full">
         <RearView />
       </section>
 
-      {/* ⭐ ENDORSEMENTS */}
+      {/* ⭐ ENDORSEMENTS SECTION */}
       <section id="endorsements" className="w-full">
         <Endorsements />
       </section>
 
-      {/* 💎 CALL TO ACTION */}
+      {/* ⚡ CALL TO ACTION SECTION */}
       <section id="cta" className="w-full">
         <CTASection />
       </section>
