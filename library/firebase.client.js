@@ -1,9 +1,11 @@
-// app/library/firebase.js
-import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
-import { getFunctions } from "firebase/functions";
+"use client";
 
+import { initializeApp, getApps, getApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { getAuth } from "firebase/auth";
+import { getStorage } from "firebase/storage";
+
+// ✅ Firebase configuration — safe for client use
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
@@ -14,13 +16,10 @@ const firebaseConfig = {
   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-
-// Initialize services
-const auth = getAuth(app);
+// ✅ Only initialize once per client session
+const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
 const db = getFirestore(app);
-const functions = getFunctions(app);
+const auth = getAuth(app);
+const storage = getStorage(app);
 
-// Export everything needed
-export { app, auth, db, functions };
+export { app, db, auth, storage };
