@@ -40,22 +40,10 @@
       "namedRegex": "^/_not\\-found(?:/)?$"
     },
     {
-      "page": "/all",
-      "regex": "^/all(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/all(?:/)?$"
-    },
-    {
       "page": "/bio",
       "regex": "^/bio(?:/)?$",
       "routeKeys": {},
       "namedRegex": "^/bio(?:/)?$"
-    },
-    {
-      "page": "/cart",
-      "regex": "^/cart(?:/)?$",
-      "routeKeys": {},
-      "namedRegex": "^/cart(?:/)?$"
     },
     {
       "page": "/cycle",

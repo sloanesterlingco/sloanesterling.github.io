@@ -1,9 +1,7 @@
 {
   "/_global-error/page": "app/_global-error/page.js",
   "/_not-found/page": "app/_not-found/page.js",
-  "/all/page": "app/all/page.js",
   "/bio/page": "app/bio/page.js",
-  "/cart/page": "app/cart/page.js",
   "/cycle/page": "app/cycle/page.js",
   "/flow/page": "app/flow/page.js",
   "/goat/page": "app/goat/page.js",

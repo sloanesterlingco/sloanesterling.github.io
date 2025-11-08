@@ -1,9 +1,9 @@
 // app/library/firebase.js
 import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
-import { getAnalytics, isSupported } from "firebase/analytics";
+import { getFunctions } from "firebase/functions";
 
-// Firebase configuration
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
@@ -17,16 +17,10 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// Enable Analytics (only in the browser)
-let analytics = null;
-if (typeof window !== "undefined") {
-  isSupported().then((yes) => {
-    if (yes) analytics = getAnalytics(app);
-  });
-}
+// Initialize services
+const auth = getAuth(app);
+const db = getFirestore(app);
+const functions = getFunctions(app);
 
-// Initialize Firestore
-export const db = getFirestore(app);
-
-// Export app and analytics
-export { app, analytics };
+// Export everything needed
+export { app, auth, db, functions };

@@ -1,10 +1,4 @@
 {
-  "23391": {
-    "id": 23391,
-    "files": [
-      "static/chunks/271380630784c538.js"
-    ]
-  },
   "30822": {
     "id": 30822,
     "files": [
@@ -26,13 +20,7 @@
   "1170": {
     "id": 1170,
     "files": [
-      "static/chunks/6e632b49401e9407.js"
-    ]
-  },
-  "56464": {
-    "id": 56464,
-    "files": [
-      "static/chunks/e8a7a98c8bea42cb.js"
+      "static/chunks/ebd77fd8d5b8341d.js"
     ]
   }
 }

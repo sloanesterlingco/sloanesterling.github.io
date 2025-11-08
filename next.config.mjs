@@ -1,4 +1,4 @@
-/** @type {import('next').NextConfig} */
+// next.config.mjs
 const nextConfig = {
   reactStrictMode: true,
   output: "standalone",
@@ -7,10 +7,11 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "luxesculptperformance.com",
-        pathname: "/**",
-      },
-    ],
-  },
+        pathname: "/**"
+      }
+    ]
+  }
 };
 
 export default nextConfig;
+
