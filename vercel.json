@@ -1,7 +1,6 @@
 {
   "version": 2,
   "framework": "nextjs",
-  "rootDirectory": ".",
   "ignoreCommand": "echo '✅ Skip ignored files check'",
   "functions": {
     "app/api/**/*.js": {
