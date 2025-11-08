@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ShoppingBag } from "lucide-react";
 import { useState } from "react";
+import BuyButton from "@/components/BuyButton"; // ✅ import for Stripe button
 
 export default function NavBar() {
   const [hovered, setHovered] = useState(null);
@@ -93,16 +94,20 @@ export default function NavBar() {
 
         {/* 🛒 ACTION BUTTONS */}
         <div className="flex items-center gap-4">
-          <Link
-            href="/cart"
-            className="bg-[#F5C84C] text-black font-medium px-5 py-2 rounded-full shadow-[0_0_8px_rgba(245,200,76,0.4)] hover:shadow-[0_0_14px_rgba(245,200,76,0.5)] hover:scale-[1.03] transition-all duration-300 ease-out"
-          >
-            Pre-Order
-          </Link>
-          <ShoppingBag className="w-5 h-5 text-white hover:text-[#F5C84C] transition-all cursor-pointer" />
+          {/* Stripe Pre-Order Button */}
+          <div className="bg-[#F5C84C] text-black font-medium px-5 py-2 rounded-full shadow-[0_0_8px_rgba(245,200,76,0.4)] hover:shadow-[0_0_14px_rgba(245,200,76,0.5)] hover:scale-[1.03] transition-all duration-300 ease-out">
+            <BuyButton
+              priceId="price_XXXX" // replace with your Stripe Gold Edition price ID
+              label="Pre-Order"
+            />
+          </div>
+
+          {/* Shopping Bag Icon */}
+          <ShoppingBag
+            className="w-5 h-5 text-white hover:text-[#F5C84C] transition-all cursor-pointer"
+          />
         </div>
-      </div>
+      </div> {/* ✅ closes .max-w-7xl container */}
     </nav>
   );
 }
-
